@@ -12,17 +12,21 @@ function SmoothScrollWrapper() {
 
     const lenis = new Lenis({
       duration: 1.2,
-      smooth: true,
       smoothTouch: true
     })
 
+    let rafHandle;
     function raf(time) {
       lenis.raf(time)
-      requestAnimationFrame(raf)
+      rafHandle = requestAnimationFrame(raf)
     }
 
-    requestAnimationFrame(raf)
+    rafHandle = requestAnimationFrame(raf)
 
+    return () => {
+      cancelAnimationFrame(rafHandle)
+      lenis.destroy()
+    }
   }, [])
 
   return <App />
