@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Kanniyakumarione SEO and Web Development Services</title>
+  <desc id="desc">Website development and Google Business optimization for businesses in Nagercoil and Kanyakumari.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#f97316" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <circle cx="980" cy="120" r="140" fill="#38bdf8" opacity="0.15" />
+  <circle cx="180" cy="520" r="180" fill="#f97316" opacity="0.12" />
+  <rect x="82" y="78" width="1036" height="474" rx="30" fill="#020617" opacity="0.72" stroke="#60a5fa" stroke-opacity="0.35" />
+  <text x="120" y="190" fill="#94a3b8" font-family="Segoe UI, Arial, sans-serif" font-size="34">Kanniyakumarione</text>
+  <text x="120" y="290" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="70" font-weight="700">Website Developer in</text>
+  <text x="120" y="375" fill="url(#accent)" font-family="Segoe UI, Arial, sans-serif" font-size="74" font-weight="700">Nagercoil &amp; Kanyakumari</text>
+  <text x="120" y="450" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="30">SEO-friendly websites, Google Business setup, and custom web apps for local businesses.</text>
+  <text x="120" y="515" fill="#e2e8f0" font-family="Segoe UI, Arial, sans-serif" font-size="26">services.kanniyakumarione.com</text>
+</svg>

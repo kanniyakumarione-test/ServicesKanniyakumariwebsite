@@ -1,131 +1,89 @@
 import { motion } from "framer-motion"
 import { FaArrowRight } from "react-icons/fa"
 
-export default function Hero(){
+export default function Hero() {
+  return (
+    <section
+      id="home"
+      aria-labelledby="hero-heading"
+      className="relative flex min-h-screen items-center justify-center overflow-hidden pt-28"
+    >
+      <div className="relative z-10 mx-auto max-w-6xl px-6 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="mb-6 inline-block rounded-full border border-white/20 bg-white/10 px-5 py-2 text-sm backdrop-blur-xl"
+        >
+          Website Developer in Nagercoil
+        </motion.div>
 
-return(
+        <motion.h1
+          id="hero-heading"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-5xl font-extrabold leading-tight md:text-7xl"
+        >
+          SEO-Friendly Websites for
+          <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+            {" "}
+            Businesses in Nagercoil
+          </span>
+        </motion.h1>
 
-<section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+          className="mx-auto mt-6 max-w-2xl text-lg text-gray-400"
+        >
+          Kanniyakumarione builds modern websites, custom web apps, and Google Business
+          Profile solutions that help businesses in Nagercoil and Kanyakumari get found
+          on Google and turn visitors into leads.
+        </motion.p>
 
-{/* background grid moved to global App layout */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5 }}
+          className="mt-10 flex flex-wrap justify-center gap-4"
+        >
+          <a
+            href="#services"
+            className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 px-8 py-4 transition hover:scale-105"
+          >
+            Explore Services
+            <FaArrowRight />
+          </a>
 
-<div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
+          <a
+            href="https://wa.me/917358847752"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-xl border border-white/20 px-8 py-4 transition hover:bg-white/10"
+          >
+            Chat on WhatsApp
+          </a>
+        </motion.div>
 
-
-{/* badge */}
-
-<motion.div
-initial={{opacity:0,y:20}}
-animate={{opacity:1,y:0}}
-className="inline-block px-5 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-xl text-sm mb-6"
->
-
-🌍 Website Developer in Nagercoil
-
-</motion.div>
-
-
-
-{/* headline */}
-
-<motion.h1
-initial={{opacity:0,y:40}}
-animate={{opacity:1,y:0}}
-transition={{duration:0.8}}
-className="text-5xl md:text-7xl font-extrabold leading-tight"
->
-
-Create  
-
-<span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-
-Future-Ready Websites
-
-</span>
-
-</motion.h1>
-
-
-
-{/* subtitle */}
-
-<motion.p
-initial={{opacity:0,y:20}}
-animate={{opacity:1,y:0}}
-transition={{delay:0.3}}
-className="mt-6 text-gray-400 text-lg max-w-2xl mx-auto"
->
-
-Modern websites, powerful web apps and Google Business optimization to help businesses in Nagercoil grow online.
-
-</motion.p>
-
-
-
-{/* buttons */}
-
-<motion.div
-initial={{opacity:0,y:20}}
-animate={{opacity:1,y:0}}
-transition={{delay:0.5}}
-className="mt-10 flex justify-center gap-4 flex-wrap"
->
-
-<a
-href="#pricing"
-className="px-8 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 hover:scale-105 transition flex items-center gap-2"
->
-
-View Packages
-<FaArrowRight/>
-
-</a>
-
-
-<a
-href="https://wa.me/917358847752"
-className="px-8 py-4 rounded-xl border border-white/20 hover:bg-white/10 transition"
->
-
-Chat on WhatsApp
-
-</a>
-
-</motion.div>
-
-
-
-{/* floating service badges */}
-
-<div className="mt-20 flex flex-wrap justify-center gap-6">
-
-{[
-"Website Development",
-"Web Applications",
-"Google Business",
-"SEO Optimization",
-"UI/UX Design"
-].map((item,i)=>(
-
-<motion.div
-key={i}
-whileHover={{scale:1.1}}
-className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl backdrop-blur-xl"
->
-
-{item}
-
-</motion.div>
-
-))}
-
-</div>
-
-
-</div>
-
-</section>
-
-)
-
+        <div className="mt-20 flex flex-wrap justify-center gap-6">
+          {[
+            "Website Development",
+            "Web Applications",
+            "Google Business",
+            "Local SEO",
+            "UI/UX Design",
+          ].map((item) => (
+            <motion.div
+              key={item}
+              whileHover={{ scale: 1.1 }}
+              className="rounded-xl border border-white/10 bg-white/5 px-6 py-3 backdrop-blur-xl"
+            >
+              {item}
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
 }
