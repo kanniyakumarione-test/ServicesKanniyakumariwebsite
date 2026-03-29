@@ -14,7 +14,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           className="mb-6 inline-block rounded-full border border-white/20 bg-white/10 px-5 py-2 text-sm backdrop-blur-xl"
         >
-          Website Developer in Nagercoil
+          Websites, Software, Automation, and Ads in Kanyakumari
         </motion.div>
 
         <motion.h1
@@ -24,10 +24,10 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="text-5xl font-extrabold leading-tight md:text-7xl"
         >
-          SEO-Friendly Websites for
+          Digital Growth Services for
           <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             {" "}
-            Businesses in Nagercoil
+            Businesses Across Kanyakumari
           </span>
         </motion.h1>
 
@@ -37,9 +37,9 @@ export default function Hero() {
           transition={{ delay: 0.3 }}
           className="mx-auto mt-6 max-w-2xl text-lg text-gray-400"
         >
-          Kanniyakumarione builds modern websites, custom web apps, and Google Business
-          Profile solutions that help businesses in Nagercoil and Kanyakumari get found
-          on Google and turn visitors into leads.
+          Kanniyakumarione helps local businesses with websites, custom software,
+          automation systems, SEO, Google Business optimization, Google Ads, and Meta Ads
+          that turn attention into real enquiries and sales.
         </motion.p>
 
         <motion.div
@@ -49,7 +49,7 @@ export default function Hero() {
           className="mt-10 flex flex-wrap justify-center gap-4"
         >
           <a
-            href="#services"
+            href="/services.html"
             className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 px-8 py-4 transition hover:scale-105"
           >
             Explore Services
@@ -69,10 +69,10 @@ export default function Hero() {
         <div className="mt-20 flex flex-wrap justify-center gap-6">
           {[
             "Website Development",
-            "Web Applications",
-            "Google Business",
-            "Local SEO",
-            "UI/UX Design",
+            "Custom Software",
+            "Automation",
+            "Google Ads",
+            "Meta Ads",
           ].map((item) => (
             <motion.div
               key={item}

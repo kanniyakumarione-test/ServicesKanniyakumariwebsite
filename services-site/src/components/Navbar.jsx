@@ -6,6 +6,8 @@ import logo from "../assets/logo.png"
 export default function Navbar() {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const currentPath =
+    typeof window !== "undefined" ? window.location.pathname.replace(/\/$/, "") || "/" : "/"
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40)
@@ -14,13 +16,18 @@ export default function Navbar() {
   }, [])
 
   const navLinks = [
-    { label: "Home", link: "#home" },
-    { label: "Services", link: "#services" },
-    { label: "Portfolio", link: "#portfolio" },
-    { label: "Pricing", link: "#pricing" },
-    { label: "Google Business", link: "#google-business" },
-    { label: "Testimonials", link: "#testimonials" },
+    { label: "Home", link: "/" },
+    { label: "Services", link: "/services.html" },
+    { label: "Portfolio", link: "/portfolio.html" },
+    { label: "Pricing", link: "/pricing.html" },
+    { label: "FAQ", link: "/faq.html" },
+    { label: "Contact", link: "/contact.html" },
   ]
+
+  const isActiveLink = (link) => {
+    const normalizedLink = link.replace(/\/$/, "") || "/"
+    return currentPath === normalizedLink
+  }
 
   return (
     <motion.header
@@ -37,7 +44,7 @@ export default function Navbar() {
         }`}
       >
         <div className="flex items-center justify-between">
-          <a href="#home" className="flex items-center gap-3" aria-label="Kanniyakumarione home">
+          <a href="/" className="flex items-center gap-3" aria-label="Kanniyakumarione home">
             <img src={logo} alt="Kanniyakumarione logo" className="h-10 w-10" />
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-xl font-bold text-transparent">
               Kanniyakumarione
@@ -49,20 +56,24 @@ export default function Navbar() {
               <a
                 key={item.label}
                 href={item.link}
-                className="group relative font-medium text-gray-300 transition hover:text-white"
+                className={`group relative font-medium transition ${
+                  isActiveLink(item.link) ? "text-white" : "text-gray-300 hover:text-white"
+                }`}
               >
                 {item.label}
-                <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-300 group-hover:w-full" />
+                <span
+                  className={`absolute -bottom-1 left-0 h-[2px] bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-300 ${
+                    isActiveLink(item.link) ? "w-full" : "w-0 group-hover:w-full"
+                  }`}
+                />
               </a>
             ))}
           </nav>
 
-          <div className="hidden md:block">
+          <div className="hidden items-center gap-3 md:flex">
             <a
-              href="https://wa.me/917358847752"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relative rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 px-6 py-2 font-medium text-white shadow-lg transition duration-300 hover:scale-105"
+              href="/contact.html"
+              className="relative rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-2 font-medium text-white shadow-lg transition duration-300 hover:scale-105"
             >
               Get Quote
             </a>
@@ -97,17 +108,17 @@ export default function Navbar() {
                   key={item.label}
                   href={item.link}
                   onClick={() => setOpen(false)}
-                  className="text-lg text-gray-300 transition hover:text-white"
+                  className={`text-lg transition ${
+                    isActiveLink(item.link) ? "text-white" : "text-gray-300 hover:text-white"
+                  }`}
                 >
                   {item.label}
                 </a>
               ))}
 
               <a
-                href="https://wa.me/917358847752"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 px-6 py-3 text-white"
+                href="/contact.html"
+                className="mt-1 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-3 text-white"
               >
                 Get Quote
               </a>

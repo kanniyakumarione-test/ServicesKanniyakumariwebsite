@@ -3,49 +3,48 @@ import { motion } from "framer-motion"
 export default function Pricing() {
   const plans = [
     {
-      name: "Starter Website",
+      name: "Starter Presence",
       price: "Rs. 5,000",
       tag: "Best for Small Businesses",
       features: [
-        "1 Professional Page Website",
-        "Mobile Responsive Design",
-        "WhatsApp Chat Button",
-        "Contact Form Integration",
-        "Basic SEO Setup",
-        "Fast Loading Performance",
-        "Free Domain Setup Help",
+        "Single-page website or landing page",
+        "Mobile responsive design",
+        "WhatsApp and lead form setup",
+        "Basic SEO setup",
+        "Google Business guidance",
+        "Fast loading performance",
         "1 Month Support",
       ],
       popular: false,
     },
     {
-      name: "Business Website",
+      name: "Business Growth",
       price: "Rs. 15,000",
       tag: "Most Popular",
       features: [
-        "Up to 5 Website Pages",
-        "Premium UI / UX Design",
-        "Advanced SEO Optimization",
-        "Google Business Profile Setup",
-        "Speed Optimization",
-        "Contact Forms and Lead Capture",
-        "WhatsApp Integration",
+        "Multi-page business website",
+        "Advanced SEO optimization",
+        "Google Business Profile setup",
+        "WhatsApp integration and lead capture",
+        "Basic automation workflows",
+        "Starter Google Ads or Meta Ads setup",
+        "Speed optimization",
         "3 Months Support",
       ],
       popular: true,
     },
     {
-      name: "Premium Web Solution",
+      name: "Advanced Digital System",
       price: "Rs. 35,000",
       tag: "Advanced Digital Solution",
       features: [
-        "Unlimited Pages",
-        "Custom Web Application",
-        "Admin Dashboard",
-        "Database Integration",
-        "AI Features / Automation",
-        "Advanced SEO Strategy",
-        "Performance Optimization",
+        "Custom software or web application",
+        "Admin dashboard and database integration",
+        "Automation and AI workflows",
+        "Advanced SEO strategy",
+        "Google Ads or Meta Ads management setup",
+        "Performance optimization",
+        "Process streamlining for operations",
         "6 Months Support",
       ],
       popular: false,
@@ -66,14 +65,14 @@ export default function Pricing() {
             Affordable
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               {" "}
-              Website Packages
+              Service Packages
             </span>
             {" "}for Growing Businesses
           </h2>
 
           <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-400">
-            Get a modern high-performance website designed to attract more customers
-            and grow your business online.
+            Choose the right mix of website work, software, automation, SEO, and ad
+            support to help your business attract customers and operate more efficiently.
           </p>
         </motion.div>
 
@@ -147,17 +146,17 @@ export default function Pricing() {
           <div className="grid gap-10 text-gray-400 md:grid-cols-3">
             <div>
               <h4 className="mb-2 text-xl font-semibold text-white">Fast Delivery</h4>
-              <p>Most websites delivered within 3 to 7 days.</p>
+              <p>Most website and campaign setups move quickly with a clear execution plan.</p>
             </div>
 
             <div>
-              <h4 className="mb-2 text-xl font-semibold text-white">Modern Design</h4>
-              <p>Premium UI inspired by modern SaaS websites.</p>
+              <h4 className="mb-2 text-xl font-semibold text-white">Flexible Scope</h4>
+              <p>We can combine websites, automation, SEO, and ad support in one package.</p>
             </div>
 
             <div>
               <h4 className="mb-2 text-xl font-semibold text-white">Business Growth</h4>
-              <p>SEO optimized websites designed to bring customers.</p>
+              <p>Services are planned to improve leads, conversions, and day-to-day operations.</p>
             </div>
           </div>
         </motion.div>

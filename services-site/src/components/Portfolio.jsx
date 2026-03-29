@@ -5,26 +5,26 @@ export default function Portfolio() {
     {
       title: "Modern Business Website",
       image: "https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=1200",
-      desc: "High converting business website designed to attract local customers and rank on Google.",
+      desc: "High-converting business website designed to attract local customers and improve search visibility.",
       tech: ["React", "Tailwind", "SEO"],
     },
     {
       title: "Employee Attendance System",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200",
-      desc: "Web application for tracking employee attendance and generating automated reports.",
+      desc: "Custom software for tracking employee attendance and generating automated reports.",
       tech: ["React", "Node.js", "MySQL"],
     },
     {
       title: "AI Content Generator",
       image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200",
-      desc: "AI platform generating alt text and content automatically using advanced AI APIs.",
+      desc: "Automation-focused AI tool for generating content and reducing repetitive manual work.",
       tech: ["AI", "Automation", "API"],
     },
     {
-      title: "Travel Agency Website",
+      title: "Travel Agency Growth Setup",
       image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200",
-      desc: "Interactive travel website for exploring destinations and contacting travel agents.",
-      tech: ["React", "Tailwind", "UI/UX"],
+      desc: "A travel business package combining landing pages, inquiry flow improvements, and campaign-ready digital assets.",
+      tech: ["Landing Pages", "UI/UX", "Lead Flow"],
     },
   ]
 
@@ -42,7 +42,7 @@ export default function Portfolio() {
           </h2>
 
           <p className="mx-auto mt-6 max-w-2xl text-gray-400">
-            A collection of websites and applications designed to help businesses grow digitally.
+            A collection of websites, software systems, automation tools, and growth-focused digital work.
           </p>
         </motion.div>
 
@@ -83,7 +83,7 @@ export default function Portfolio() {
 
                 <div className="rounded-xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl">
                   <p className="text-sm text-gray-300">
-                    Result: Improved user engagement and faster performance.
+                    Result: Better conversion flow, stronger visibility, and smoother business operations.
                   </p>
                 </div>
               </div>

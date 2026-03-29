@@ -14,7 +14,7 @@ export default function Testimonials() {
       name: "Priya Joseph",
       business: "Boutique Owner",
       review:
-        "Very professional website development. My business now looks premium online and customers trust it more.",
+        "Very professional service. Our website, WhatsApp flow, and campaigns made the business look more premium and brought better enquiries.",
       image: "https://randomuser.me/api/portraits/women/44.jpg",
     },
     {
@@ -28,7 +28,7 @@ export default function Testimonials() {
       name: "Maria Thomas",
       business: "Beauty Salon",
       review:
-        "Amazing service and support. The website and Google profile helped increase bookings.",
+        "Amazing service and support. The website, Google profile, and ad support helped increase bookings.",
       image: "https://randomuser.me/api/portraits/women/68.jpg",
     },
   ]
@@ -51,7 +51,7 @@ export default function Testimonials() {
           </h2>
 
           <p className="mx-auto mt-6 max-w-2xl text-gray-400">
-            Businesses in Nagercoil trust us to build their digital presence.
+            Businesses in Nagercoil trust us to improve their digital presence, lead flow, and visibility.
           </p>
         </motion.div>
 
@@ -101,7 +101,7 @@ export default function Testimonials() {
 
         <div className="mt-24 text-center">
           <h3 className="mb-4 text-3xl font-bold">Ready to Grow Your Business?</h3>
-          <p className="mb-8 text-gray-400">Get a professional website that attracts customers.</p>
+          <p className="mb-8 text-gray-400">Get the right mix of website, software, automation, SEO, and ads support.</p>
           <a
             href="https://wa.me/917358847752"
             target="_blank"

@@ -10,6 +10,15 @@ import Testimonials from "./components/Testimonials"
 import Footer from "./components/Footer"
 import WhatsApp from "./components/WhatsApp"
 import Phone from "./components/Phone"
+import WhyChooseUs from "./components/WhyChooseUs"
+import Industries from "./components/Industries"
+import ServiceAreas from "./components/ServiceAreas"
+import BeforeAfter from "./components/BeforeAfter"
+import CaseStudies from "./components/CaseStudies"
+import Faq from "./components/Faq"
+import ContactSection from "./components/ContactSection"
+import SeoLandingLinks from "./components/SeoLandingLinks"
+import ClientTrustStrip from "./components/ClientTrustStrip"
 import logo from "./assets/logo.png"
 
 function App() {
@@ -113,9 +122,18 @@ function App() {
         <main id="main-content">
           <Hero />
           <Services />
+          <WhyChooseUs />
+          <Industries />
+          <ServiceAreas />
           <Portfolio />
+          <BeforeAfter />
+          <CaseStudies />
+          <ClientTrustStrip />
           <Pricing />
           <GoogleBusiness />
+          <Faq />
+          <ContactSection />
+          <SeoLandingLinks />
           <Testimonials />
         </main>
 
