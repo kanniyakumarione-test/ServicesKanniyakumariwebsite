@@ -76,7 +76,7 @@ export default function Pricing() {
           </p>
         </motion.div>
 
-        <div className="mt-20 grid gap-10 lg:grid-cols-3">
+        <div className="mt-20 grid items-stretch gap-10 lg:grid-cols-3">
           {plans.map((plan) => {
             const isPopular = plan.popular
 
@@ -85,13 +85,17 @@ export default function Pricing() {
                 key={plan.name}
                 whileHover={{ y: -12, scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 200 }}
-                className={`relative rounded-3xl p-[1px] ${
+                className={`relative flex h-full rounded-3xl p-[1px] ${
                   isPopular
                     ? "bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"
                     : "bg-white/10"
                 }`}
               >
-                <div className={`rounded-3xl p-6 backdrop-blur-xl md:p-10 ${isPopular ? "bg-black/70" : "bg-black/60"}`}>
+                <div
+                  className={`flex h-full w-full flex-col rounded-3xl p-6 backdrop-blur-xl md:p-10 ${
+                    isPopular ? "bg-black/70" : "bg-black/60"
+                  }`}
+                >
                   {isPopular && (
                     <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 px-5 py-1 text-xs font-semibold shadow-lg">
                       Most Popular
@@ -106,7 +110,7 @@ export default function Pricing() {
                     <span className="text-sm text-gray-400">/project</span>
                   </div>
 
-                  <ul className="mb-10 space-y-4">
+                  <ul className="mb-10 flex-1 space-y-4">
                     {plan.features.map((feature) => (
                       <li key={feature} className="flex items-center gap-3 text-sm text-gray-300">
                         <div className="flex min-w-8 items-center justify-center rounded-full bg-green-500/20 px-2 py-1 text-[10px] font-semibold uppercase tracking-wide text-green-300">
