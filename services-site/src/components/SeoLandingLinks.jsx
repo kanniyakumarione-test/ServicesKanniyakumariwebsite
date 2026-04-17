@@ -56,6 +56,21 @@ const pages = [
     desc: "A dedicated page for business photoshoots, branding visuals, and promotional content.",
     href: "/photoshoot-services.html",
   },
+  {
+    title: "Data Annotation Services",
+    desc: "Accurate image, text, and video labeling and data annotation for AI and machine learning tasks.",
+    href: "/data-annotation-services.html",
+  },
+  {
+    title: "Alt Text Writing Services",
+    desc: "Professional alt text writing for e-commerce, publishers, and websites to improve SEO and accessibility.",
+    href: "/alt-text-writing-services.html",
+  },
+  {
+    title: "Accessibility Services",
+    desc: "Web accessibility testing and remediation to ensure WCAG compliance for digital platforms.",
+    href: "/accessibility-services.html",
+  },
 ]
 
 export default function SeoLandingLinks() {

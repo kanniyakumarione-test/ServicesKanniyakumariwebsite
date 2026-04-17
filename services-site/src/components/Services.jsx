@@ -10,6 +10,9 @@ import {
   FaPhotoVideo,
   FaImage,
   FaCheckCircle,
+  FaUniversalAccess,
+  FaFileAlt,
+  FaDatabase
 } from "react-icons/fa"
 
 const serviceGroups = [
@@ -147,6 +150,48 @@ const serviceGroups = [
           "Product shoots",
           "Promo visuals",
           "Campaign content",
+        ],
+      },
+    ],
+  },
+  {
+    title: "Data and Accessibility",
+    summary: "Ensure your data is labeled and your platforms are usable by everyone.",
+    services: [
+      {
+        icon: <FaDatabase />,
+        title: "Data Annotation",
+        href: "/data-annotation-services.html",
+        desc: "High-quality, accurate data labeling and annotation for AI, machine learning and research.",
+        features: [
+          "Image and video bounding",
+          "Audio transcription",
+          "Text categorization",
+          "Custom NLP datasets",
+        ],
+      },
+      {
+        icon: <FaFileAlt />,
+        title: "Alt Text Writing",
+        href: "/alt-text-writing-services.html",
+        desc: "Accurate, descriptive alternative text for images to improve SEO and assist screen readers.",
+        features: [
+          "E-commerce product descriptions",
+          "Educational diagrams",
+          "SEO keyword integration",
+          "WCAG compliance",
+        ],
+      },
+      {
+        icon: <FaUniversalAccess />,
+        title: "Accessibility Services",
+        href: "/accessibility-services.html",
+        desc: "Audits and remediation to ensure your digital properties are completely accessible to all users.",
+        features: [
+          "WCAG 2.1 audits",
+          "Screen reader testing",
+          "Keyboard navigation",
+          "Remediation support",
         ],
       },
     ],
