@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import { FaArrowLeft } from "react-icons/fa"
 import SiteLayout from "../components/SiteLayout"
 
 export default function SeoStrategiesPage() {
@@ -6,6 +7,20 @@ export default function SeoStrategiesPage() {
     <SiteLayout>
       <section className="px-6 pb-20 pt-36 lg:pb-24 lg:pt-48">
         <div className="mx-auto max-w-4xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mb-6"
+          >
+            <a
+              href="/blog.html"
+              className="inline-flex items-center gap-2 text-sm text-blue-300 transition hover:text-white"
+            >
+              <FaArrowLeft className="text-xs" />
+              Back to Blog
+            </a>
+          </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

@@ -12,7 +12,7 @@ export default function FaqPage() {
         highlight="Digital Project"
         description="This standalone FAQ page covers pricing, delivery time, hosting, support, and project expectations so visitors can get clarity quickly."
       />
-      <Faq />
+      <Faq hideHeader={true} />
       <ContactSection />
     </SiteLayout>
   )

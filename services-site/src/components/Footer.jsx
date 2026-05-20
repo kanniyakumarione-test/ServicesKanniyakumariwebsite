@@ -11,14 +11,20 @@ export default function Footer() {
 
   const quickLinks = [
     { label: "Home", href: "/" },
+    { label: "About", href: "/about.html" },
     { label: "Services", href: "/services.html" },
     { label: "Portfolio", href: "/portfolio.html" },
     { label: "Pricing", href: "/pricing.html" },
+    { label: "Blog", href: "/blog.html" },
     { label: "FAQ", href: "/faq.html" },
     { label: "Contact", href: "/contact.html" },
+    { label: "Privacy Policy", href: "/privacy-policy.html" },
+    { label: "Terms of Service", href: "/terms-of-service.html" },
   ]
 
   const serviceLinks = [
+    { label: "Website Dev", href: "/website-developer-in-nagercoil.html" },
+    { label: "SEO", href: "/seo-strategies-services-businesses.html" },
     { label: "Software", href: "/software-services.html" },
     { label: "AI Services", href: "/ai-services.html" },
     { label: "Automation", href: "/automation-services.html" },
@@ -77,15 +83,15 @@ export default function Footer() {
           <section className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl">
             <h3 className="text-lg font-semibold text-white">Explore</h3>
 
-            <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
+            <div className="mt-6 grid grid-cols-2 gap-4">
               {quickLinks.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
-                  className={`rounded-2xl border px-4 py-3 text-sm transition ${
+                  className={`text-sm transition ${
                     isActiveLink(item.href)
-                      ? "border-blue-400/40 bg-blue-500/10 text-white"
-                      : "border-white/10 bg-black/20 text-gray-300 hover:border-white/20 hover:text-white"
+                      ? "text-blue-400 font-medium"
+                      : "text-gray-400 hover:text-white"
                   }`}
                 >
                   {item.label}
@@ -98,7 +104,7 @@ export default function Footer() {
             <h3 className="text-lg font-semibold text-white">Contact</h3>
 
             <address className="mt-6 not-italic space-y-4 text-sm text-gray-300">
-              <p>Nagercoil, Tamil Nadu</p>
+              <p>Nagercoil, Tamil Nadu, India — Serving Globally</p>
               <p className="flex items-center gap-3">
                 <FaEnvelope className="text-gray-400" />
                 <a href="mailto:kanniyakumarione@gmail.com" className="hover:text-white">

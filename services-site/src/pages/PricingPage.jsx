@@ -13,7 +13,7 @@ export default function PricingPage() {
         highlight="Growing Businesses"
         description="Compare service packages, support levels, and project scope options so you can choose the right starting point for your business."
       />
-      <Pricing />
+      <Pricing hideHeader={true} />
       <ContactSection />
     </SiteLayout>
   )

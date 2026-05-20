@@ -18,7 +18,8 @@ import PhotoEditingPage from "../pages/PhotoEditingPage"
 import PhotoshootPage from "../pages/PhotoshootPage"
 import WebsiteDeveloperPage from "../pages/WebsiteDeveloperPage"
 import GoogleBusinessPage from "../pages/GoogleBusinessPage"
-
+import AboutPage from "../pages/AboutPage"
+import TermsPage from "../pages/TermsPage"
 const pageMap = {
   "index.html": HomePage,
   "services.html": ServicesPage,
@@ -38,6 +39,8 @@ const pageMap = {
   "photoshoot-services.html": PhotoshootPage,
   "website-developer-in-nagercoil.html": WebsiteDeveloperPage,
   "google-business-profile-setup-in-kanyakumari.html": GoogleBusinessPage,
+  "about.html": AboutPage,
+  "terms-of-service.html": TermsPage,
 }
 
 export function getPageNames() {

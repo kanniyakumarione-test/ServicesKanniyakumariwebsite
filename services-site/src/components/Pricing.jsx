@@ -1,10 +1,11 @@
 import { motion } from "framer-motion"
 
-export default function Pricing() {
+export default function Pricing({ hideHeader = false }) {
   const plans = [
     {
       name: "Starter Presence",
       price: "Rs. 5,000",
+      usdPrice: "~$60 USD",
       tag: "Best for Small Businesses",
       features: [
         "Single-page website or landing page",
@@ -20,6 +21,7 @@ export default function Pricing() {
     {
       name: "Business Growth",
       price: "Rs. 15,000",
+      usdPrice: "~$180 USD",
       tag: "Most Popular",
       features: [
         "Multi-page business website",
@@ -36,6 +38,7 @@ export default function Pricing() {
     {
       name: "Advanced Digital System",
       price: "Rs. 35,000",
+      usdPrice: "~$420 USD",
       tag: "Advanced Digital Solution",
       features: [
         "Custom software or web application",
@@ -54,27 +57,29 @@ export default function Pricing() {
   return (
     <section id="pricing" aria-labelledby="pricing-heading" className="relative overflow-hidden py-20">
       <div className="mx-auto max-w-7xl px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="mb-16 text-center"
-        >
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-300">Pricing</p>
-          <h2 id="pricing-heading" className="mt-8 text-4xl font-bold leading-tight md:text-6xl">
-            Affordable
-            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              {" "}
-              Service Packages
-            </span>
-            {" "}for Growing Businesses
-          </h2>
+        {!hideHeader && (
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="mb-16 text-center"
+          >
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-300">Pricing</p>
+            <h2 id="pricing-heading" className="mt-8 text-4xl font-bold leading-tight md:text-6xl">
+              Affordable
+              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                {" "}
+                Service Packages
+              </span>
+              {" "}for Growing Businesses
+            </h2>
 
-          <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-400">
-            Choose the right mix of website work, software, automation, SEO, and ad
-            support to help your business attract customers and operate more efficiently.
-          </p>
-        </motion.div>
+            <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-400">
+              Choose the right mix of website work, software, automation, SEO, and ad
+              support to help your business attract customers and operate more efficiently.
+            </p>
+          </motion.div>
+        )}
 
         <div className="mt-20 grid items-stretch gap-10 lg:grid-cols-3">
           {plans.map((plan) => {
@@ -105,9 +110,14 @@ export default function Pricing() {
                   <h3 className="mb-3 text-2xl font-bold">{plan.name}</h3>
                   <p className="mb-6 text-sm text-gray-400">{plan.tag}</p>
 
-                  <div className="mb-10 flex items-end gap-2">
-                    <span className="text-5xl font-bold">{plan.price}</span>
-                    <span className="text-sm text-gray-400">/project</span>
+                  <div className="mb-10 flex flex-col gap-1">
+                    <div className="flex items-end gap-2">
+                      <span className="text-4xl font-bold">{plan.price}</span>
+                      <span className="text-sm text-gray-400">/project</span>
+                    </div>
+                    <div className="text-sm text-cyan-300 font-medium">
+                      or {plan.usdPrice}
+                    </div>
                   </div>
 
                   <ul className="mb-10 flex-1 space-y-4">

@@ -9,8 +9,8 @@ const points = [
   },
   {
     icon: <FaHandsHelping />,
-    title: "Local Support",
-    desc: "Direct support for businesses in Nagercoil and Kanyakumari with practical advice, updates, and follow-up help.",
+    title: "Dedicated Support",
+    desc: "Direct, responsive support for businesses anywhere — with practical advice, clear updates, and follow-up help across every project.",
   },
   {
     icon: <FaMobileAlt />,
@@ -36,7 +36,7 @@ export default function WhyChooseUs() {
         >
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-300">Why Choose Us</p>
           <h2 id="why-us-heading" className="mt-6 text-4xl font-bold md:text-5xl">
-            Built for Local Businesses That Need
+            Built for Businesses That Need
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               {" "}
               Real Results
@@ -57,11 +57,12 @@ export default function WhyChooseUs() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -8 }}
-              className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl"
+              className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl"
             >
-              <div className="mb-5 text-3xl text-blue-400">{point.icon}</div>
-              <h3 className="mb-3 text-2xl font-semibold">{point.title}</h3>
-              <p className="text-sm leading-relaxed text-gray-400">{point.desc}</p>
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-purple-500/0 to-pink-500/0 transition duration-500 group-hover:via-blue-500/10" />
+              <div className="relative z-10 mb-5 text-3xl text-blue-400">{point.icon}</div>
+              <h3 className="relative z-10 mb-3 text-2xl font-semibold">{point.title}</h3>
+              <p className="relative z-10 text-sm leading-relaxed text-gray-400">{point.desc}</p>
             </motion.div>
           ))}
         </div>

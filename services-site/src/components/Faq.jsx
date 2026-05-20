@@ -6,7 +6,7 @@ export const faqs = [
   {
     question: "How much does a business website cost?",
     answer:
-      "Our pricing starts from Rs. 5,000 for a starter website and scales based on the number of pages, features, and custom functionality you need.",
+      "Our pricing starts from Rs. 5,000 (approx. $60 USD) for a starter website and scales based on the number of pages, features, and custom functionality you need.",
   },
   {
     question: "How long does delivery usually take?",
@@ -30,27 +30,29 @@ export const faqs = [
   },
 ]
 
-export default function Faq() {
+export default function Faq({ hideHeader = false }) {
   const [openIndex, setOpenIndex] = useState(0)
 
   return (
-    <section id="faq" aria-labelledby="faq-heading" className="relative py-24">
-      <div className="mx-auto max-w-5xl px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="mb-14 text-center"
-        >
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-300">FAQ</p>
-          <h2 id="faq-heading" className="mt-6 text-4xl font-bold md:text-5xl">
-            Common Questions Before
-            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              {" "}
-              Starting a Project
-            </span>
-          </h2>
-        </motion.div>
+    <section id="faq" aria-labelledby="faq-heading" className="relative overflow-hidden py-20">
+      <div className="mx-auto max-w-4xl px-6">
+        {!hideHeader && (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="mb-14 text-center"
+          >
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-300">FAQ</p>
+            <h2 id="faq-heading" className="mt-6 text-4xl font-bold md:text-5xl">
+              Common Questions Before
+              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                {" "}
+                Starting a Project
+              </span>
+            </h2>
+          </motion.div>
+        )}
 
         <div className="space-y-4">
           {faqs.map((item, index) => {

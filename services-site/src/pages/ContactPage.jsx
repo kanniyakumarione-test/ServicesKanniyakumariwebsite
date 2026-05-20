@@ -11,7 +11,7 @@ export default function ContactPage() {
         highlight="Direct Inquiry"
         description="Use this page to reach out for websites, software, automation, AI, ads, or creative services with one clear enquiry flow."
       />
-      <ContactSection />
+      <ContactSection hideHeader={true} />
     </SiteLayout>
   )
 }

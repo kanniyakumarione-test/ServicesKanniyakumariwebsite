@@ -1,15 +1,15 @@
 import { motion } from "framer-motion"
 
 const labels = [
-  "Restaurants",
-  "Salons",
-  "Gyms",
-  "Clinics",
-  "Travel Agencies",
-  "Retail Shops",
-  "Trainers",
-  "Service Providers",
-  "Medical Practices",
+  "Restaurants & Cafés",
+  "Clinics & Healthcare",
+  "Salons & Spas",
+  "Gyms & Fitness Studios",
+  "Travel & Tourism",
+  "Retail & E-commerce",
+  "Freelancers & Trainers",
+  "Agencies & Consultants",
+  "SaaS & Tech Startups",
 ]
 
 export default function ClientTrustStrip() {
@@ -24,18 +24,17 @@ export default function ClientTrustStrip() {
             className="mx-auto max-w-3xl text-center"
           >
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-gray-400">
-              Businesses We Commonly Work With
+              Who We Work With
             </p>
             <h2 className="mt-5 text-3xl font-bold md:text-4xl">
-              Supporting Local Business Categories Across
+              Supporting Business Categories{" "}
               <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-pink-400 bg-clip-text text-transparent">
-                {" "}
-                Kanyakumari
+                Across the Globe
               </span>
             </h2>
             <p className="mt-4 text-gray-400">
-              We deliver websites, software, automation, SEO, and ads support for practical
-              local businesses that need better visibility and more direct customer enquiries.
+              We deliver websites, software, automation, SEO, and ads support for businesses
+              of every size — from solo operators to growing enterprises worldwide.
             </p>
           </motion.div>
 

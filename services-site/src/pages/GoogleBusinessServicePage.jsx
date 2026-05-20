@@ -10,7 +10,7 @@ export default function GoogleBusinessServicePage() {
         eyebrow="Google Business Service"
         title="Dedicated Google Maps Visibility Support for"
         highlight="Local Businesses"
-        description="This page stands on its own for Google Business Profile setup, optimization, maps visibility, and local search improvements across Nagercoil and Kanyakumari."
+        description="This page stands on its own for Google Business Profile setup, optimization, maps visibility, and local search improvements for businesses globally."
       />
       <GoogleBusiness />
       <ContactSection />

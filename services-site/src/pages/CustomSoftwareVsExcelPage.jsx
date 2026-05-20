@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import { FaArrowLeft } from "react-icons/fa"
 import SiteLayout from "../components/SiteLayout"
 
 export default function CustomSoftwareVsExcelPage() {
@@ -6,6 +7,20 @@ export default function CustomSoftwareVsExcelPage() {
     <SiteLayout>
       <section className="px-6 pb-20 pt-36 lg:pb-24 lg:pt-48">
         <div className="mx-auto max-w-4xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mb-6"
+          >
+            <a
+              href="/blog.html"
+              className="inline-flex items-center gap-2 text-sm text-blue-300 transition hover:text-white"
+            >
+              <FaArrowLeft className="text-xs" />
+              Back to Blog
+            </a>
+          </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -36,7 +51,7 @@ export default function CustomSoftwareVsExcelPage() {
             className="mt-12 space-y-8 text-lg text-gray-300"
           >
             <p className="text-xl font-medium text-gray-200">
-              For years, small businesses in Nagercoil and Kanyakumari have relied on Microsoft Excel and Google Sheets to handle customer logs, inventory, and billing. But as your business scales, this becomes a massive bottleneck.
+              For years, small businesses around the world have relied on Microsoft Excel and Google Sheets to handle customer logs, inventory, and billing. But as your business scales, this becomes a massive bottleneck.
             </p>
 
             <div className="rounded-2xl bg-white/5 border border-white/10 p-8 my-10">

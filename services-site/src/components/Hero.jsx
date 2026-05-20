@@ -14,7 +14,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           className="mb-6 inline-block rounded-full border border-white/20 bg-white/10 px-5 py-2 text-sm backdrop-blur-xl"
         >
-          Websites, Software, Automation, and Ads in Kanyakumari
+          Websites, Software, Automation, and Digital Growth — Worldwide
         </motion.div>
 
         <motion.h1
@@ -27,7 +27,7 @@ export default function Hero() {
           Digital Growth Services for
           <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             {" "}
-            Businesses Across Kanyakumari
+            Businesses Around the World
           </span>
         </motion.h1>
 
@@ -37,7 +37,7 @@ export default function Hero() {
           transition={{ delay: 0.3 }}
           className="mx-auto mt-6 max-w-2xl text-lg text-gray-400"
         >
-          Kanniyakumarione helps local businesses with websites, custom software,
+          Kanniyakumarione helps businesses worldwide with websites, custom software,
           automation systems, SEO, Google Business optimization, Google Ads, and Meta Ads
           that turn attention into real enquiries and sales.
         </motion.p>
@@ -66,21 +66,36 @@ export default function Hero() {
           </a>
         </motion.div>
 
-        <div className="mt-20 flex flex-wrap justify-center gap-6">
+        <div className="mt-16 flex flex-wrap justify-center gap-8 border-t border-white/10 pt-12">
           {[
-            "Website Development",
-            "Custom Software",
-            "Automation",
-            "Google Ads",
-            "Meta Ads",
+            { label: "50+", sub: "Projects Delivered" },
+            { label: "3+", sub: "Years of Experience" },
+            { label: "30+", sub: "Clients Worldwide" },
+            { label: "100%", sub: "Remote Friendly" },
+          ].map((stat) => (
+            <div key={stat.label} className="text-center">
+              <p className="text-3xl font-extrabold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">{stat.label}</p>
+              <p className="mt-1 text-sm text-gray-400">{stat.sub}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-10 flex flex-wrap justify-center gap-4">
+          {[
+            { label: "Website Development", href: "/website-developer-in-nagercoil.html" },
+            { label: "Custom Software", href: "/software-services.html" },
+            { label: "Automation", href: "/automation-services.html" },
+            { label: "Google Ads", href: "/google-ads-services.html" },
+            { label: "Meta Ads", href: "/meta-ads-services.html" },
           ].map((item) => (
-            <motion.div
-              key={item}
-              whileHover={{ scale: 1.1 }}
-              className="rounded-xl border border-white/10 bg-white/5 px-6 py-3 backdrop-blur-xl"
+            <motion.a
+              key={item.label}
+              href={item.href}
+              whileHover={{ scale: 1.08 }}
+              className="rounded-xl border border-white/10 bg-white/5 px-6 py-3 backdrop-blur-xl text-gray-200 text-sm transition hover:border-blue-400/40 hover:text-white"
             >
-              {item}
-            </motion.div>
+              {item.label}
+            </motion.a>
           ))}
         </div>
       </div>

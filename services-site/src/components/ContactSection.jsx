@@ -9,7 +9,7 @@ const initialForm = {
   message: "",
 }
 
-export default function ContactSection() {
+export default function ContactSection({ hideHeader = false }) {
   const [form, setForm] = useState(initialForm)
 
   const handleChange = ({ target }) => {
@@ -47,15 +47,19 @@ export default function ContactSection() {
           transition={{ duration: 0.6 }}
           className="rounded-3xl border border-white/10 bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10 p-8 md:p-10"
         >
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-300">Contact Form</p>
-          <h2 id="contact-form-heading" className="mt-6 text-4xl font-bold md:text-5xl">
-            Tell Us About
-            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              {" "}
-              Your Project
-            </span>
-          </h2>
-          <p className="mt-6 text-gray-400">
+          {!hideHeader && (
+            <>
+              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-300">Contact Form</p>
+              <h2 id="contact-form-heading" className="mt-6 text-4xl font-bold md:text-5xl">
+                Tell Us About
+                <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  {" "}
+                  Your Project
+                </span>
+              </h2>
+            </>
+          )}
+          <p className={hideHeader ? "text-gray-400" : "mt-6 text-gray-400"}>
             Share a few details and we will turn your brief into a pre-filled project inquiry.
             It opens directly in WhatsApp so you can send it in one tap.
           </p>
