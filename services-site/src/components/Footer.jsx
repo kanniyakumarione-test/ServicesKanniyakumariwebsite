@@ -1,10 +1,11 @@
 "use client";
 import { usePathname } from "next/navigation";
+import Link from 'next/link';
 import { FaWhatsapp, FaEnvelope, FaPhoneAlt, FaGlobe, FaArrowRight } from "react-icons/fa"
 
 export default function Footer() {
-  const currentPath =
-    typeof window !== "undefined" ? window.location.pathname.replace(/\/$/, "") || "/" : "/"
+  const pathname = usePathname();
+  const currentPath = pathname ? pathname.replace(/\/$/, "") || "/" : "/";
 
   const isActiveLink = (link) => {
     const normalizedLink = link.replace(/\/$/, "") || "/"
@@ -56,21 +57,21 @@ export default function Footer() {
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">
-              <a
+              <Link
                 href="https://services.kanniyakumarione.com/"
                 className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-black/20 text-base transition hover:border-blue-400/40 hover:text-blue-300"
                 aria-label="Visit Kanniyakumarione website"
               >
                 <FaGlobe />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="mailto:kanniyakumarione@gmail.com"
                 className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-black/20 text-base transition hover:border-blue-400/40 hover:text-blue-300"
                 aria-label="Send an email"
               >
                 <FaEnvelope />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://wa.me/917358847752"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -78,7 +79,7 @@ export default function Footer() {
                 aria-label="Chat on WhatsApp"
               >
                 <FaWhatsapp />
-              </a>
+              </Link>
             </div>
           </section>
 
@@ -87,7 +88,7 @@ export default function Footer() {
 
             <div className="mt-6 grid grid-cols-2 gap-4">
               {quickLinks.map((item) => (
-                <a
+                <Link
                   key={item.href}
                   href={item.href}
                   className={`text-sm transition ${
@@ -97,7 +98,7 @@ export default function Footer() {
                   }`}
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
             </div>
           </section>
@@ -109,19 +110,19 @@ export default function Footer() {
               <p>Nagercoil, Tamil Nadu, India — Serving Globally</p>
               <p className="flex items-center gap-3">
                 <FaEnvelope className="text-gray-400" />
-                <a href="mailto:kanniyakumarione@gmail.com" className="hover:text-white">
+                <Link href="mailto:kanniyakumarione@gmail.com" className="hover:text-white">
                   kanniyakumarione@gmail.com
-                </a>
+                </Link>
               </p>
               <p className="flex items-center gap-3">
                 <FaPhoneAlt className="text-gray-400" />
-                <a href="tel:+917358847752" className="hover:text-white">
+                <Link href="tel:+917358847752" className="hover:text-white">
                   +91 73588 47752
-                </a>
+                </Link>
               </p>
             </address>
 
-            <a
+            <Link
               href="https://wa.me/917358847752"
               target="_blank"
               rel="noopener noreferrer"
@@ -129,7 +130,7 @@ export default function Footer() {
             >
               Chat on WhatsApp
               <FaArrowRight className="text-sm" />
-            </a>
+            </Link>
           </section>
         </div>
 
@@ -143,18 +144,18 @@ export default function Footer() {
               </p>
             </div>
 
-            <a
+            <Link
               href="/services"
               className="inline-flex items-center gap-2 text-sm font-semibold text-blue-300 transition hover:text-white"
             >
               View all services
               <FaArrowRight className="text-xs" />
-            </a>
+            </Link>
           </div>
 
           <div className="mt-6 flex flex-wrap gap-3">
             {serviceLinks.map((item) => (
-              <a
+              <Link
                 key={item.href}
                 href={item.href}
                 className={`rounded-full border px-4 py-2 text-sm transition ${
@@ -164,7 +165,7 @@ export default function Footer() {
                 }`}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </div>
         </section>

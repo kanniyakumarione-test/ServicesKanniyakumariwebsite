@@ -1,4 +1,5 @@
 "use client";
+import Link from 'next/link';
 import { useRef } from "react"
 import { motion, useAnimationControls } from "framer-motion"
 import { FaStar } from "react-icons/fa"
@@ -147,14 +148,14 @@ export default function Testimonials() {
         <div className="mt-24 text-center">
           <h3 className="mb-4 text-3xl font-bold">Ready to Grow Your Business?</h3>
           <p className="mb-8 text-gray-400">Get the right mix of website, software, automation, SEO, and ads support.</p>
-          <a
+          <Link
             href="https://wa.me/917358847752"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-xl bg-gradient-to-r from-purple-500 to-blue-500 px-8 py-4 transition hover:scale-105"
           >
             Start Your Project
-          </a>
+          </Link>
         </div>
       </div>
     </section>

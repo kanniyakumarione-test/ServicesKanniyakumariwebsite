@@ -1,4 +1,6 @@
 "use client";
+import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from "framer-motion"
 import { FaWhatsapp } from "react-icons/fa"
 
@@ -54,13 +56,13 @@ export default function Portfolio() {
                 
                 <div className="relative z-10 overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 shadow-2xl transition-transform duration-700 group-hover:-translate-y-2 group-hover:scale-[1.02]">
                   <div className="absolute inset-0 z-10 mix-blend-overlay bg-gradient-to-tr from-blue-500/20 to-purple-500/20 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-                  <img
+                  <Image
                     src={project.image}
                     alt={project.title}
                     loading="lazy"
                     decoding="async"
                     className="h-[400px] w-full object-cover transition-transform duration-700 group-hover:scale-110 md:h-[500px]"
-                  />
+                  width={1000} height={1000} />
                 </div>
               </div>
 
@@ -115,7 +117,7 @@ export default function Portfolio() {
               We share detailed project screenshots, live interactive demos, and in-depth case studies directly via WhatsApp.
               Reach out and we will send you the most relevant examples for your industry.
             </p>
-            <a
+            <Link
               href="https://wa.me/917358847752?text=Hi%2C%20I%20would%20like%20to%20see%20your%20portfolio"
               target="_blank"
               rel="noopener noreferrer"
@@ -123,7 +125,7 @@ export default function Portfolio() {
             >
               <FaWhatsapp className="text-2xl" />
               Request Full Portfolio
-            </a>
+            </Link>
           </div>
         </motion.div>
       </div>

@@ -1,4 +1,5 @@
 "use client";
+import Link from 'next/link';
 import { motion } from "framer-motion"
 import { FaGoogle, FaMapMarkerAlt, FaStar, FaPhoneAlt, FaCheckCircle } from "react-icons/fa"
 
@@ -169,14 +170,14 @@ export default function GoogleBusiness() {
                 ))}
               </ul>
 
-              <a
+              <Link
                 href="https://wa.me/917358847752"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block rounded-xl bg-gradient-to-r from-blue-500 to-red-500 py-3 text-center transition hover:scale-105"
               >
                 Get Started
-              </a>
+              </Link>
             </motion.div>
           ))}
         </div>
@@ -188,14 +189,14 @@ export default function GoogleBusiness() {
             We help businesses appear in Google Maps and local search results.
           </p>
 
-          <a
+          <Link
             href="https://wa.me/917358847752"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-xl bg-gradient-to-r from-blue-500 to-red-500 px-8 py-4 transition hover:scale-105"
           >
             Setup My Google Business
-          </a>
+          </Link>
         </div>
       </div>
     </section>

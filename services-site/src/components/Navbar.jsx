@@ -2,14 +2,16 @@
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { usePathname } from "next/navigation";
+import Link from 'next/link';
+import Image from 'next/image';
 import { FaBars, FaTimes } from "react-icons/fa"
 import logo from "../assets/logo.png"
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const currentPath =
-    typeof window !== "undefined" ? window.location.pathname.replace(/\/$/, "") || "/" : "/"
+  const pathname = usePathname();
+  const currentPath = pathname ? pathname.replace(/\/$/, "") || "/" : "/";
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40)
@@ -48,16 +50,16 @@ export default function Navbar() {
         }`}
       >
         <div className="flex items-center justify-between">
-          <a href="/" className="flex items-center gap-3" aria-label="Kanniyakumarione home">
-            <img src={logo.src || logo} alt="Kanniyakumarione logo" className="h-10 w-10" />
+          <Link href="/" className="flex items-center gap-3" aria-label="Kanniyakumarione home">
+            <Image src={logo.src || logo} alt="Kanniyakumarione logo" className="h-10 w-10" width={1000} height={1000} />
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-xl font-bold text-transparent">
               Kanniyakumarione
             </span>
-          </a>
+          </Link>
 
           <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
             {navLinks.map((item) => (
-              <a
+              <Link
                 key={item.label}
                 href={item.link}
                 className={`group relative font-medium transition ${
@@ -70,17 +72,17 @@ export default function Navbar() {
                     isActiveLink(item.link) ? "w-full" : "w-0 group-hover:w-full"
                   }`}
                 />
-              </a>
+              </Link>
             ))}
           </nav>
 
           <div className="hidden items-center gap-3 md:flex">
-            <a
+            <Link
               href="/contact"
               className="relative rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-2 font-medium text-white shadow-lg transition duration-300 hover:scale-105"
             >
               Get Quote
-            </a>
+            </Link>
           </div>
 
           <button
@@ -108,7 +110,7 @@ export default function Navbar() {
           >
             <div className="flex flex-col gap-6 text-center">
               {navLinks.map((item) => (
-                <a
+                <Link
                   key={item.label}
                   href={item.link}
                   onClick={() => setOpen(false)}
@@ -117,15 +119,15 @@ export default function Navbar() {
                   }`}
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
 
-              <a
+              <Link
                 href="/contact"
                 className="mt-1 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-3 text-white"
               >
                 Get Quote
-              </a>
+              </Link>
             </div>
           </motion.div>
         )}

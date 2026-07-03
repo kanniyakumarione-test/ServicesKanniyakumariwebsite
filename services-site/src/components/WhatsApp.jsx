@@ -1,4 +1,5 @@
 "use client";
+import Link from 'next/link';
 import { FaWhatsapp } from "react-icons/fa"
 
 export default function Whatsapp() {
@@ -6,7 +7,7 @@ export default function Whatsapp() {
 
   return (
     <div className="group fixed bottom-6 right-6 z-40">
-      <a
+      <Link
         href={`https://wa.me/${phone}?text=Hello%20I%20am%20interested%20in%20your%20services`}
         target="_blank"
         rel="noopener noreferrer"
@@ -15,7 +16,7 @@ export default function Whatsapp() {
       >
         <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75" />
         <FaWhatsapp className="relative text-3xl text-white" />
-      </a>
+      </Link>
 
       <div className="absolute right-20 top-1/2 hidden -translate-y-1/2 whitespace-nowrap rounded-lg bg-black px-4 py-2 text-sm text-white opacity-0 transition group-hover:opacity-100 sm:block">
         Chat on WhatsApp

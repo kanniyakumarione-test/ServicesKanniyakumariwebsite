@@ -1,4 +1,5 @@
 "use client";
+import Link from 'next/link';
 import { useState } from "react"
 import { motion } from "framer-motion"
 
@@ -72,18 +73,18 @@ export default function ContactSection({ hideHeader = false }) {
               timeline, features, and what package fits your business.
             </p>
             <div className="mt-6 flex flex-wrap gap-4">
-              <a
+              <Link
                 href="tel:+917358847752"
                 className="rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 px-6 py-3 font-semibold transition hover:scale-105"
               >
                 Book Free Call
-              </a>
-              <a
+              </Link>
+              <Link
                 href="mailto:kanniyakumarione@gmail.com"
                 className="rounded-xl border border-white/15 px-6 py-3 font-semibold transition hover:bg-white/10"
               >
                 Send Email
-              </a>
+              </Link>
             </div>
           </div>
         </motion.div>

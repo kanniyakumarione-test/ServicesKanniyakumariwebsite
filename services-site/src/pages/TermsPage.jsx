@@ -1,4 +1,5 @@
 "use client";
+import Link from 'next/link';
 import { motion } from "framer-motion"
 import SiteLayout from "../components/SiteLayout"
 import { FaArrowLeft } from "react-icons/fa"
@@ -48,13 +49,13 @@ export default function TermsPage() {
             animate={{ opacity: 1, y: 0 }}
             className="mb-4"
           >
-            <a
+            <Link
               href="/"
               className="inline-flex items-center gap-2 text-sm text-blue-300 transition hover:text-white"
             >
               <FaArrowLeft className="text-xs" />
               Back to Home
-            </a>
+            </Link>
           </motion.div>
 
           <motion.div
@@ -96,12 +97,12 @@ export default function TermsPage() {
           <div className="mt-12 rounded-2xl border border-blue-400/20 bg-gradient-to-br from-blue-500/10 to-transparent p-8 text-center">
             <h3 className="text-xl font-semibold">Have questions about these terms?</h3>
             <p className="mt-2 text-gray-400">We prefer clear, honest agreements. Contact us if you need clarification.</p>
-            <a
+            <Link
               href="/contact"
               className="mt-6 inline-flex rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 px-8 py-3 font-semibold text-white transition hover:scale-105"
             >
               Contact Us
-            </a>
+            </Link>
           </div>
         </div>
       </section>

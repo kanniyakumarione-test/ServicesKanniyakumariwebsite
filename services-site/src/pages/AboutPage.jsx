@@ -1,4 +1,5 @@
 "use client";
+import Link from 'next/link';
 import { motion } from "framer-motion"
 import SiteLayout from "../components/SiteLayout"
 import PageHero from "../components/PageHero"
@@ -76,12 +77,12 @@ export default function AboutPage() {
             <p className="mx-auto mt-6 max-w-2xl text-gray-400 text-lg">
               Whether you need a brand new website, a custom internal tool, or a team to manage your ad campaigns, we have the expertise to deliver.
             </p>
-            <a
+            <Link
               href="/contact"
               className="mt-8 inline-flex rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 px-8 py-4 font-semibold text-white shadow-lg transition hover:scale-105"
             >
               Discuss Your Project
-            </a>
+            </Link>
           </motion.div>
         </div>
       </section>

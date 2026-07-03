@@ -1,4 +1,5 @@
 "use client";
+import Link from 'next/link';
 import { motion } from "framer-motion"
 import SiteLayout from "../components/SiteLayout"
 import { FaArrowLeft, FaHome } from "react-icons/fa"
@@ -33,20 +34,20 @@ export default function NotFoundPage() {
             </p>
 
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-              <a
+              <Link
                 href="/"
                 className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 px-8 py-4 font-semibold transition hover:scale-105"
               >
                 <FaHome />
                 Go to Homepage
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/services"
                 className="flex items-center gap-2 rounded-xl border border-white/20 px-8 py-4 font-semibold transition hover:bg-white/10"
               >
                 <FaArrowLeft />
                 Browse Services
-              </a>
+              </Link>
             </div>
 
             <div className="mt-16 grid gap-4 sm:grid-cols-3">
@@ -58,13 +59,13 @@ export default function NotFoundPage() {
                 { label: "Blog", href: "/blog" },
                 { label: "FAQ", href: "/faq" },
               ].map((link) => (
-                <a
+                <Link
                   key={link.label}
                   href={link.href}
                   className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-gray-300 transition hover:border-blue-400/40 hover:text-white"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </div>
           </motion.div>

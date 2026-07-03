@@ -1,4 +1,5 @@
 "use client";
+import Link from 'next/link';
 import { motion } from "framer-motion"
 import { FaArrowRight } from "react-icons/fa"
 
@@ -49,22 +50,22 @@ export default function Hero() {
           transition={{ delay: 0.5 }}
           className="mt-10 flex flex-wrap justify-center gap-4"
         >
-          <a
+          <Link
             href="/services"
             className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 px-8 py-4 transition hover:scale-105"
           >
             Explore Services
             <FaArrowRight />
-          </a>
+          </Link>
 
-          <a
+          <Link
             href="https://wa.me/917358847752"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-xl border border-white/20 px-8 py-4 transition hover:bg-white/10"
           >
             Chat on WhatsApp
-          </a>
+          </Link>
         </motion.div>
 
         <div className="mt-16 flex flex-wrap justify-center gap-8 border-t border-white/10 pt-12">

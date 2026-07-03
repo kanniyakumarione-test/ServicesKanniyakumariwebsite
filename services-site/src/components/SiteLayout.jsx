@@ -1,4 +1,5 @@
 "use client";
+import Link from 'next/link';
 import Navbar from "./Navbar"
 import Footer from "./Footer"
 import WhatsApp from "./WhatsApp"
@@ -7,12 +8,12 @@ import Phone from "./Phone"
 export default function SiteLayout({ children }) {
   return (
     <div className="relative min-h-screen overflow-hidden">
-      <a
+      <Link
         href="#main-content"
         className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[120] focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-black"
       >
         Skip to main content
-      </a>
+      </Link>
 
       <div className="pointer-events-none absolute -left-20 -top-20 z-0 hidden h-[500px] w-[500px] rounded-full bg-blue-500 opacity-10 blur-[160px] sm:block" />
       <div className="pointer-events-none absolute -bottom-20 -right-20 z-0 hidden h-[500px] w-[500px] rounded-full bg-red-500 opacity-10 blur-[160px] sm:block" />

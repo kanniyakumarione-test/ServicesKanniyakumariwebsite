@@ -1,4 +1,5 @@
 "use client";
+import Link from 'next/link';
 import { motion } from "framer-motion"
 import { FaGlobe, FaWhatsapp } from "react-icons/fa"
 
@@ -76,7 +77,7 @@ export default function ServiceAreas() {
               </span>
             </div>
 
-            <a
+            <Link
               href="https://wa.me/917358847752"
               target="_blank"
               rel="noopener noreferrer"
@@ -84,7 +85,7 @@ export default function ServiceAreas() {
             >
               <FaWhatsapp />
               Start a Project Today
-            </a>
+            </Link>
           </motion.div>
 
           <div className="space-y-6">

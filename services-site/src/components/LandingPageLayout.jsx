@@ -1,4 +1,5 @@
 "use client";
+import Link from 'next/link';
 import { FaArrowRight, FaPhoneAlt, FaWhatsapp } from "react-icons/fa"
 
 const themeStyles = {
@@ -74,31 +75,31 @@ export default function LandingPageLayout({
       <header className="border-b border-white/10 bg-black/40 backdrop-blur-xl">
         <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-5 md:flex-row md:items-center md:justify-between">
           <div className="flex items-center justify-between gap-4">
-            <a href="/" className="text-lg font-bold text-white">
+            <Link href="/" className="text-lg font-bold text-white">
               Kanniyakumarione
-            </a>
-            <a
+            </Link>
+            <Link
               href="/"
               className="inline-flex rounded-full border border-white/10 px-4 py-2 text-sm font-medium text-gray-200 transition hover:border-white/20 hover:text-white"
             >
               Home
-            </a>
+            </Link>
           </div>
           <div className="flex flex-wrap items-center gap-3">
-            <a
+            <Link
               href="/services"
               className="inline-flex rounded-full border border-white/10 px-4 py-2 text-sm font-medium text-gray-200 transition hover:border-white/20 hover:text-white"
             >
               All Services
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://wa.me/917358847752"
               target="_blank"
               rel="noopener noreferrer"
               className={`rounded-xl bg-gradient-to-r px-5 py-2 font-semibold ${activeTheme.button}`}
             >
               Get Quote
-            </a>
+            </Link>
           </div>
         </div>
       </header>
@@ -123,7 +124,7 @@ export default function LandingPageLayout({
               <p className="mt-6 max-w-3xl text-lg text-gray-400">{description}</p>
 
               <div className="mt-10 flex flex-wrap gap-4">
-                <a
+                <Link
                   href="https://wa.me/917358847752"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -131,14 +132,14 @@ export default function LandingPageLayout({
                 >
                   Chat on WhatsApp
                   <FaWhatsapp />
-                </a>
-                <a
+                </Link>
+                <Link
                   href="tel:+917358847752"
                   className="flex items-center gap-2 rounded-xl border border-white/15 px-7 py-4 font-semibold"
                 >
                   Book Consultation
                   <FaPhoneAlt />
-                </a>
+                </Link>
               </div>
 
               <div className="mt-12 flex flex-wrap gap-3">
@@ -205,7 +206,7 @@ export default function LandingPageLayout({
           >
             <h2 className="mx-auto max-w-3xl text-4xl font-bold leading-tight">{ctaTitle}</h2>
             <p className="mx-auto mt-4 max-w-3xl text-gray-300">{ctaText}</p>
-            <a
+            <Link
               href="https://wa.me/917358847752"
               target="_blank"
               rel="noopener noreferrer"
@@ -213,7 +214,7 @@ export default function LandingPageLayout({
             >
               Start Your Project
               <FaArrowRight />
-            </a>
+            </Link>
           </div>
         </section>
       </main>

@@ -1,4 +1,5 @@
 "use client";
+import Link from 'next/link';
 import { motion } from "framer-motion"
 import SiteLayout from "../components/SiteLayout"
 import { FaArrowLeft } from "react-icons/fa"
@@ -52,13 +53,13 @@ export default function PrivacyPolicyPage() {
             animate={{ opacity: 1, y: 0 }}
             className="mb-4"
           >
-            <a
+            <Link
               href="/"
               className="inline-flex items-center gap-2 text-sm text-blue-300 transition hover:text-white"
             >
               <FaArrowLeft className="text-xs" />
               Back to Home
-            </a>
+            </Link>
           </motion.div>
 
           <motion.div
@@ -81,9 +82,9 @@ export default function PrivacyPolicyPage() {
 
             <p className="mt-8 text-lg text-gray-300">
               Kanniyakumarione (&ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;) operates the website at{" "}
-              <a href="https://services.kanniyakumarione.com" className="text-blue-300 underline hover:text-white">
+              <Link href="https://services.kanniyakumarione.com" className="text-blue-300 underline hover:text-white">
                 services.kanniyakumarione.com
-              </a>
+              </Link>
               . This page explains what information we collect, how we use it, and your rights regarding your personal data.
             </p>
           </motion.div>
@@ -108,12 +109,12 @@ export default function PrivacyPolicyPage() {
           <div className="mt-12 rounded-2xl border border-blue-400/20 bg-gradient-to-br from-blue-500/10 to-transparent p-8 text-center">
             <h3 className="text-xl font-semibold">Questions about your data?</h3>
             <p className="mt-2 text-gray-400">Contact us directly and we will respond within 24 hours.</p>
-            <a
+            <Link
               href="/contact"
               className="mt-6 inline-flex rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 px-8 py-3 font-semibold text-white transition hover:scale-105"
             >
               Contact Us
-            </a>
+            </Link>
           </div>
         </div>
       </section>

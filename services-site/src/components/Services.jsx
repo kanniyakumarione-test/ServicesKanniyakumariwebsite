@@ -1,4 +1,5 @@
 "use client";
+import Link from 'next/link';
 import { motion } from "framer-motion"
 import {
   FaLaptopCode,
@@ -252,21 +253,21 @@ export default function Services({ variant = "full", hideHeader = false }) {
                 <p className="mt-4 text-gray-400">{group.summary}</p>
                 <div className="mt-6 flex flex-wrap gap-3">
                   {group.items.map((item) => (
-                    <a
+                    <Link
                       key={item.label}
                       href={item.href}
                       className="rounded-full border border-white/10 bg-black/20 px-4 py-2 text-sm text-gray-200 transition hover:border-blue-400/40 hover:text-white"
                     >
                       {item.label}
-                    </a>
+                    </Link>
                   ))}
                 </div>
-                <a
+                <Link
                   href="/services"
                   className="mt-auto pt-8 inline-flex items-center gap-1 text-sm font-medium text-blue-300 transition hover:text-white"
                 >
                   View all services →
-                </a>
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -318,12 +319,12 @@ export default function Services({ variant = "full", hideHeader = false }) {
                         ))}
                       </ul>
 
-                      <a
+                      <Link
                         href={service.href}
                         className="relative z-10 mt-6 inline-flex rounded-xl border border-white/15 px-4 py-2 text-sm font-semibold text-blue-300 transition hover:border-blue-400/40 hover:text-white"
                       >
                         View service page
-                      </a>
+                      </Link>
                     </motion.div>
                   ))}
                 </div>

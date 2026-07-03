@@ -1,4 +1,5 @@
 "use client";
+import Link from 'next/link';
 import { motion } from "framer-motion"
 import { FaArrowLeft } from "react-icons/fa"
 import SiteLayout from "../components/SiteLayout"
@@ -13,13 +14,13 @@ export default function CustomSoftwareVsExcelPage() {
             animate={{ opacity: 1, y: 0 }}
             className="mb-6"
           >
-            <a
+            <Link
               href="/blog"
               className="inline-flex items-center gap-2 text-sm text-blue-300 transition hover:text-white"
             >
               <FaArrowLeft className="text-xs" />
               Back to Blog
-            </a>
+            </Link>
           </motion.div>
 
           <motion.div
@@ -90,12 +91,12 @@ export default function CustomSoftwareVsExcelPage() {
               <p className="mt-4 text-gray-300 max-w-2xl mx-auto">
                 Kanniyakumarione specializes in building secure, lightweight custom dashboards tailored precisely to how your business operates.
               </p>
-              <a
+              <Link
                 href="/software-services"
                 className="mt-8 inline-flex rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-4 font-bold tracking-wide text-white transition hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
               >
                 Explore Custom Software
-              </a>
+              </Link>
             </div>
           </motion.article>
         </div>

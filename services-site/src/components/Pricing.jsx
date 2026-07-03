@@ -1,4 +1,5 @@
 "use client";
+import Link from 'next/link';
 import { motion } from "framer-motion"
 
 export default function Pricing({ hideHeader = false }) {
@@ -132,7 +133,7 @@ export default function Pricing({ hideHeader = false }) {
                     ))}
                   </ul>
 
-                  <a
+                  <Link
                     href="https://wa.me/917358847752"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -143,7 +144,7 @@ export default function Pricing({ hideHeader = false }) {
                     }`}
                   >
                     Start This Project
-                  </a>
+                  </Link>
                 </div>
               </motion.div>
             )
