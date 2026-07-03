@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion"
 import { FaArrowRight } from "react-icons/fa"
 import SiteLayout from "../components/SiteLayout"
@@ -10,7 +11,7 @@ const posts = [
     date: "April 17, 2026",
     readTime: "5 min read",
     category: "Business Strategy",
-    href: "/how-to-grow-your-business-in-kanyakumari.html",
+    href: "/how-to-grow-your-business-in-kanyakumari",
   },
   {
     featured: false,
@@ -19,7 +20,7 @@ const posts = [
     date: "April 10, 2026",
     readTime: "4 min read",
     category: "Software",
-    href: "/custom-software-vs-excel.html",
+    href: "/custom-software-vs-excel",
   },
   {
     featured: false,
@@ -28,7 +29,7 @@ const posts = [
     date: "March 29, 2026",
     readTime: "6 min read",
     category: "SEO",
-    href: "/seo-strategies-services-businesses.html",
+    href: "/seo-strategies-services-businesses",
   },
 ]
 

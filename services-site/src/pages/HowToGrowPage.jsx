@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion"
 import { FaArrowLeft } from "react-icons/fa"
 import SiteLayout from "../components/SiteLayout"
@@ -13,7 +14,7 @@ export default function HowToGrowPage() {
             className="mb-6"
           >
             <a
-              href="/blog.html"
+              href="/blog"
               className="inline-flex items-center gap-2 text-sm text-blue-300 transition hover:text-white"
             >
               <FaArrowLeft className="text-xs" />
@@ -81,7 +82,7 @@ export default function HowToGrowPage() {
                 Kanniyakumarione helps local businesses establish powerful online presences. Connect with us today to start your digital transformation.
               </p>
               <a
-                href="/contact.html"
+                href="/contact"
                 className="mt-6 inline-flex rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 px-6 py-3 font-semibold text-white transition hover:scale-105"
               >
                 Book a Consultation

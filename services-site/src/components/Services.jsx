@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion"
 import {
   FaLaptopCode,
@@ -24,7 +25,7 @@ const serviceGroups = [
       {
         icon: <FaLaptopCode />,
         title: "Website Development",
-        href: "/website-developer-in-nagercoil.html",
+        href: "/website-developer-in-nagercoil",
         desc: "Modern responsive websites designed to help businesses attract more customers online.",
         features: [
           "SEO optimized structure",
@@ -36,7 +37,7 @@ const serviceGroups = [
       {
         icon: <FaServer />,
         title: "Custom Web Applications",
-        href: "/software-services.html",
+        href: "/software-services",
         desc: "Powerful software systems built to automate and simplify business operations.",
         features: [
           "Attendance systems",
@@ -48,7 +49,7 @@ const serviceGroups = [
       {
         icon: <FaRobot />,
         title: "AI Services",
-        href: "/ai-services.html",
+        href: "/ai-services",
         desc: "Practical AI solutions that improve workflows, communication, and business efficiency.",
         features: [
           "AI chatbots",
@@ -60,7 +61,7 @@ const serviceGroups = [
       {
         icon: <FaCog />,
         title: "Automation Systems",
-        href: "/automation-services.html",
+        href: "/automation-services",
         desc: "Workflow automation that reduces manual work and improves follow-up speed.",
         features: [
           "Lead automation workflows",
@@ -78,7 +79,7 @@ const serviceGroups = [
       {
         icon: <FaGoogle />,
         title: "Google Business Optimization",
-        href: "/google-business.html",
+        href: "/google-business",
         desc: "Improve visibility on Google Maps and attract more local customers.",
         features: [
           "Profile setup",
@@ -90,7 +91,7 @@ const serviceGroups = [
       {
         icon: <FaBullhorn />,
         title: "Google Ads and Meta Ads",
-        href: "/google-ads-services.html",
+        href: "/google-ads-services",
         desc: "Paid ad campaigns that help local businesses reach ready-to-buy customers faster.",
         features: [
           "Google Search Ads",
@@ -108,7 +109,7 @@ const serviceGroups = [
       {
         icon: <FaPalette />,
         title: "Logo Design",
-        href: "/logo-design-services.html",
+        href: "/logo-design-services",
         desc: "Brand identity and logo design for businesses that need a more professional and memorable presence.",
         features: [
           "Logo concepts",
@@ -120,7 +121,7 @@ const serviceGroups = [
       {
         icon: <FaPhotoVideo />,
         title: "Video Editing",
-        href: "/video-editing-services.html",
+        href: "/video-editing-services",
         desc: "Video editing for promotions, reels, ads, explainers, and social media content.",
         features: [
           "Promo edits",
@@ -132,7 +133,7 @@ const serviceGroups = [
       {
         icon: <FaImage />,
         title: "Photo Editing",
-        href: "/photo-editing-services.html",
+        href: "/photo-editing-services",
         desc: "Photo editing for products, branding visuals, campaigns, menus, and social media content.",
         features: [
           "Retouching",
@@ -144,7 +145,7 @@ const serviceGroups = [
       {
         icon: <FaCamera />,
         title: "Photoshoot Support",
-        href: "/photoshoot-services.html",
+        href: "/photoshoot-services",
         desc: "Photoshoot planning and content support for branding, products, promotions, and campaigns.",
         features: [
           "Brand shoots",
@@ -162,7 +163,7 @@ const serviceGroups = [
       {
         icon: <FaDatabase />,
         title: "Data Annotation",
-        href: "/data-annotation-services.html",
+        href: "/data-annotation-services",
         desc: "High-quality, accurate data labeling and annotation for AI, machine learning and research.",
         features: [
           "Image and video bounding",
@@ -174,7 +175,7 @@ const serviceGroups = [
       {
         icon: <FaFileAlt />,
         title: "Alt Text Writing",
-        href: "/alt-text-writing-services.html",
+        href: "/alt-text-writing-services",
         desc: "Accurate, descriptive alternative text for images to improve SEO and assist screen readers.",
         features: [
           "E-commerce product descriptions",
@@ -186,7 +187,7 @@ const serviceGroups = [
       {
         icon: <FaUniversalAccess />,
         title: "Accessibility Services",
-        href: "/accessibility-services.html",
+        href: "/accessibility-services",
         desc: "Audits and remediation to ensure your digital properties are completely accessible to all users.",
         features: [
           "WCAG 2.1 audits",
@@ -261,7 +262,7 @@ export default function Services({ variant = "full", hideHeader = false }) {
                   ))}
                 </div>
                 <a
-                  href="/services.html"
+                  href="/services"
                   className="mt-auto pt-8 inline-flex items-center gap-1 text-sm font-medium text-blue-300 transition hover:text-white"
                 >
                   View all services →

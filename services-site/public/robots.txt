@@ -1,6 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://services.kanniyakumarione.com/sitemap.xml
-
-# Sitemap points to the production URL.

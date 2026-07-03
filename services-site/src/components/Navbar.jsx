@@ -1,5 +1,7 @@
+"use client";
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
+import { usePathname } from "next/navigation";
 import { FaBars, FaTimes } from "react-icons/fa"
 import logo from "../assets/logo.png"
 
@@ -17,13 +19,13 @@ export default function Navbar() {
 
   const navLinks = [
     { label: "Home", link: "/" },
-    { label: "Services", link: "/services.html" },
-    { label: "Portfolio", link: "/portfolio.html" },
-    { label: "About", link: "/about.html" },
-    { label: "Pricing", link: "/pricing.html" },
-    { label: "Blog", link: "/blog.html" },
-    { label: "FAQ", link: "/faq.html" },
-    { label: "Contact", link: "/contact.html" },
+    { label: "Services", link: "/services" },
+    { label: "Portfolio", link: "/portfolio" },
+    { label: "About", link: "/about" },
+    { label: "Pricing", link: "/pricing" },
+    { label: "Blog", link: "/blog" },
+    { label: "FAQ", link: "/faq" },
+    { label: "Contact", link: "/contact" },
   ]
 
   const isActiveLink = (link) => {
@@ -47,7 +49,7 @@ export default function Navbar() {
       >
         <div className="flex items-center justify-between">
           <a href="/" className="flex items-center gap-3" aria-label="Kanniyakumarione home">
-            <img src={logo} alt="Kanniyakumarione logo" className="h-10 w-10" />
+            <img src={logo.src || logo} alt="Kanniyakumarione logo" className="h-10 w-10" />
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-xl font-bold text-transparent">
               Kanniyakumarione
             </span>
@@ -74,7 +76,7 @@ export default function Navbar() {
 
           <div className="hidden items-center gap-3 md:flex">
             <a
-              href="/contact.html"
+              href="/contact"
               className="relative rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-2 font-medium text-white shadow-lg transition duration-300 hover:scale-105"
             >
               Get Quote
@@ -119,7 +121,7 @@ export default function Navbar() {
               ))}
 
               <a
-                href="/contact.html"
+                href="/contact"
                 className="mt-1 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-3 text-white"
               >
                 Get Quote

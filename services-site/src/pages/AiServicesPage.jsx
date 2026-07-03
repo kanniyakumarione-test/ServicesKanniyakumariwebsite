@@ -1,3 +1,4 @@
+"use client";
 import LandingPageLayout from "../components/LandingPageLayout"
 
 export default function AiServicesPage() {

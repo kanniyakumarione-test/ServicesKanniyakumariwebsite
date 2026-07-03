@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion"
 import { FaGlobe, FaWhatsapp } from "react-icons/fa"
 

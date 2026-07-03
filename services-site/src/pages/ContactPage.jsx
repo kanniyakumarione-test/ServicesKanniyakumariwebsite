@@ -1,3 +1,4 @@
+"use client";
 import ContactSection from "../components/ContactSection"
 import PageHero from "../components/PageHero"
 import SiteLayout from "../components/SiteLayout"

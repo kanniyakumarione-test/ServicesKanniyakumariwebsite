@@ -1,3 +1,4 @@
+"use client";
 import { FaPhoneAlt } from "react-icons/fa"
 
 export default function Phone() {

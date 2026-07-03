@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion"
 import { FaGoogle, FaMapMarkerAlt, FaStar, FaPhoneAlt, FaCheckCircle } from "react-icons/fa"
 

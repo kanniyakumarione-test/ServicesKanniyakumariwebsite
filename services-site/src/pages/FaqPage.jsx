@@ -1,3 +1,4 @@
+"use client";
 import Faq from "../components/Faq"
 import ContactSection from "../components/ContactSection"
 import PageHero from "../components/PageHero"

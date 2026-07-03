@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion"
 import { FaArrowRight } from "react-icons/fa"
 
@@ -49,7 +50,7 @@ export default function Hero() {
           className="mt-10 flex flex-wrap justify-center gap-4"
         >
           <a
-            href="/services.html"
+            href="/services"
             className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 px-8 py-4 transition hover:scale-105"
           >
             Explore Services
@@ -82,11 +83,11 @@ export default function Hero() {
 
         <div className="mt-10 flex flex-wrap justify-center gap-4">
           {[
-            { label: "Website Development", href: "/website-developer-in-nagercoil.html" },
-            { label: "Custom Software", href: "/software-services.html" },
-            { label: "Automation", href: "/automation-services.html" },
-            { label: "Google Ads", href: "/google-ads-services.html" },
-            { label: "Meta Ads", href: "/meta-ads-services.html" },
+            { label: "Website Development", href: "/website-developer-in-nagercoil" },
+            { label: "Custom Software", href: "/software-services" },
+            { label: "Automation", href: "/automation-services" },
+            { label: "Google Ads", href: "/google-ads-services" },
+            { label: "Meta Ads", href: "/meta-ads-services" },
           ].map((item) => (
             <motion.a
               key={item.label}

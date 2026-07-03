@@ -1,3 +1,5 @@
+"use client";
+import { usePathname } from "next/navigation";
 import { FaWhatsapp, FaEnvelope, FaPhoneAlt, FaGlobe, FaArrowRight } from "react-icons/fa"
 
 export default function Footer() {
@@ -11,30 +13,30 @@ export default function Footer() {
 
   const quickLinks = [
     { label: "Home", href: "/" },
-    { label: "About", href: "/about.html" },
-    { label: "Services", href: "/services.html" },
-    { label: "Portfolio", href: "/portfolio.html" },
-    { label: "Pricing", href: "/pricing.html" },
-    { label: "Blog", href: "/blog.html" },
-    { label: "FAQ", href: "/faq.html" },
-    { label: "Contact", href: "/contact.html" },
-    { label: "Privacy Policy", href: "/privacy-policy.html" },
-    { label: "Terms of Service", href: "/terms-of-service.html" },
+    { label: "About", href: "/about" },
+    { label: "Services", href: "/services" },
+    { label: "Portfolio", href: "/portfolio" },
+    { label: "Pricing", href: "/pricing" },
+    { label: "Blog", href: "/blog" },
+    { label: "FAQ", href: "/faq" },
+    { label: "Contact", href: "/contact" },
+    { label: "Privacy Policy", href: "/privacy-policy" },
+    { label: "Terms of Service", href: "/terms-of-service" },
   ]
 
   const serviceLinks = [
-    { label: "Website Dev", href: "/website-developer-in-nagercoil.html" },
-    { label: "SEO", href: "/seo-strategies-services-businesses.html" },
-    { label: "Software", href: "/software-services.html" },
-    { label: "AI Services", href: "/ai-services.html" },
-    { label: "Automation", href: "/automation-services.html" },
-    { label: "Google Business", href: "/google-business.html" },
-    { label: "Google Ads", href: "/google-ads-services.html" },
-    { label: "Meta Ads", href: "/meta-ads-services.html" },
-    { label: "Logo Design", href: "/logo-design-services.html" },
-    { label: "Video Editing", href: "/video-editing-services.html" },
-    { label: "Photo Editing", href: "/photo-editing-services.html" },
-    { label: "Photoshoot", href: "/photoshoot-services.html" },
+    { label: "Website Dev", href: "/website-developer-in-nagercoil" },
+    { label: "SEO", href: "/seo-strategies-services-businesses" },
+    { label: "Software", href: "/software-services" },
+    { label: "AI Services", href: "/ai-services" },
+    { label: "Automation", href: "/automation-services" },
+    { label: "Google Business", href: "/google-business" },
+    { label: "Google Ads", href: "/google-ads-services" },
+    { label: "Meta Ads", href: "/meta-ads-services" },
+    { label: "Logo Design", href: "/logo-design-services" },
+    { label: "Video Editing", href: "/video-editing-services" },
+    { label: "Photo Editing", href: "/photo-editing-services" },
+    { label: "Photoshoot", href: "/photoshoot-services" },
   ]
 
   return (
@@ -142,7 +144,7 @@ export default function Footer() {
             </div>
 
             <a
-              href="/services.html"
+              href="/services"
               className="inline-flex items-center gap-2 text-sm font-semibold text-blue-300 transition hover:text-white"
             >
               View all services

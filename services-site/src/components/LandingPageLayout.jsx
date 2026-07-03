@@ -1,3 +1,4 @@
+"use client";
 import { FaArrowRight, FaPhoneAlt, FaWhatsapp } from "react-icons/fa"
 
 const themeStyles = {
@@ -73,11 +74,11 @@ export default function LandingPageLayout({
       <header className="border-b border-white/10 bg-black/40 backdrop-blur-xl">
         <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-5 md:flex-row md:items-center md:justify-between">
           <div className="flex items-center justify-between gap-4">
-            <a href="./index.html" className="text-lg font-bold text-white">
+            <a href="/" className="text-lg font-bold text-white">
               Kanniyakumarione
             </a>
             <a
-              href="./index.html"
+              href="/"
               className="inline-flex rounded-full border border-white/10 px-4 py-2 text-sm font-medium text-gray-200 transition hover:border-white/20 hover:text-white"
             >
               Home
@@ -85,7 +86,7 @@ export default function LandingPageLayout({
           </div>
           <div className="flex flex-wrap items-center gap-3">
             <a
-              href="./services.html"
+              href="/services"
               className="inline-flex rounded-full border border-white/10 px-4 py-2 text-sm font-medium text-gray-200 transition hover:border-white/20 hover:text-white"
             >
               All Services

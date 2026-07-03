@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion"
 import SiteLayout from "../components/SiteLayout"
 import { FaArrowLeft, FaHome } from "react-icons/fa"
@@ -40,7 +41,7 @@ export default function NotFoundPage() {
                 Go to Homepage
               </a>
               <a
-                href="/services.html"
+                href="/services"
                 className="flex items-center gap-2 rounded-xl border border-white/20 px-8 py-4 font-semibold transition hover:bg-white/10"
               >
                 <FaArrowLeft />
@@ -50,12 +51,12 @@ export default function NotFoundPage() {
 
             <div className="mt-16 grid gap-4 sm:grid-cols-3">
               {[
-                { label: "Services", href: "/services.html" },
-                { label: "Portfolio", href: "/portfolio.html" },
-                { label: "Contact", href: "/contact.html" },
-                { label: "Pricing", href: "/pricing.html" },
-                { label: "Blog", href: "/blog.html" },
-                { label: "FAQ", href: "/faq.html" },
+                { label: "Services", href: "/services" },
+                { label: "Portfolio", href: "/portfolio" },
+                { label: "Contact", href: "/contact" },
+                { label: "Pricing", href: "/pricing" },
+                { label: "Blog", href: "/blog" },
+                { label: "FAQ", href: "/faq" },
               ].map((link) => (
                 <a
                   key={link.label}

@@ -1,3 +1,4 @@
+"use client";
 import { useRef } from "react"
 import { motion, useAnimationControls } from "framer-motion"
 import { FaStar } from "react-icons/fa"

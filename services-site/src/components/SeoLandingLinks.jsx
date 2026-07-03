@@ -1,75 +1,76 @@
+"use client";
 import { motion } from "framer-motion"
 
 const pages = [
   {
     title: "Website Developer in Nagercoil",
     desc: "A dedicated SEO landing page focused on local website design and business website services.",
-    href: "/website-developer-in-nagercoil.html",
+    href: "/website-developer-in-nagercoil",
   },
   {
     title: "Custom Software Services",
     desc: "A dedicated page for dashboards, internal tools, billing systems, and business software.",
-    href: "/software-services.html",
+    href: "/software-services",
   },
   {
     title: "AI Services",
     desc: "A dedicated page for AI chat support, workflow improvement, and content assistance.",
-    href: "/ai-services.html",
+    href: "/ai-services",
   },
   {
     title: "Automation Services",
     desc: "A focused page for lead automation, WhatsApp workflows, and connected business systems.",
-    href: "/automation-services.html",
+    href: "/automation-services",
   },
   {
     title: "Google Business Profile Setup in Kanyakumari",
     desc: "A focused page for Google Maps visibility, local optimization, and profile setup support.",
-    href: "/google-business-profile-setup-in-kanyakumari.html",
+    href: "/google-business-profile-setup-in-kanyakumari",
   },
   {
     title: "Google Ads Services",
     desc: "A dedicated page for Google Ads setup, search campaigns, and local lead generation.",
-    href: "/google-ads-services.html",
+    href: "/google-ads-services",
   },
   {
     title: "Meta Ads Services",
     desc: "A dedicated page for Facebook and Instagram ads, awareness, and enquiry campaigns.",
-    href: "/meta-ads-services.html",
+    href: "/meta-ads-services",
   },
   {
     title: "Logo Design Services",
     desc: "A dedicated page for logos, brand direction, and visual identity design.",
-    href: "/logo-design-services.html",
+    href: "/logo-design-services",
   },
   {
     title: "Video Editing Services",
     desc: "A dedicated page for promo videos, reels, ad edits, and social media content.",
-    href: "/video-editing-services.html",
+    href: "/video-editing-services",
   },
   {
     title: "Photo Editing Services",
     desc: "A dedicated page for product photos, campaign visuals, and branded image editing.",
-    href: "/photo-editing-services.html",
+    href: "/photo-editing-services",
   },
   {
     title: "Photoshoot Services",
     desc: "A dedicated page for business photoshoots, branding visuals, and promotional content.",
-    href: "/photoshoot-services.html",
+    href: "/photoshoot-services",
   },
   {
     title: "Data Annotation Services",
     desc: "Accurate image, text, and video labeling and data annotation for AI and machine learning tasks.",
-    href: "/data-annotation-services.html",
+    href: "/data-annotation-services",
   },
   {
     title: "Alt Text Writing Services",
     desc: "Professional alt text writing for e-commerce, publishers, and websites to improve SEO and accessibility.",
-    href: "/alt-text-writing-services.html",
+    href: "/alt-text-writing-services",
   },
   {
     title: "Accessibility Services",
     desc: "Web accessibility testing and remediation to ensure WCAG compliance for digital platforms.",
-    href: "/accessibility-services.html",
+    href: "/accessibility-services",
   },
 ]
 

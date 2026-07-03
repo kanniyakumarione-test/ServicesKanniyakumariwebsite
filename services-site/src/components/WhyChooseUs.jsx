@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion"
 import { FaBolt, FaHandsHelping, FaMobileAlt, FaRocket } from "react-icons/fa"
 

@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion"
 import SiteLayout from "../components/SiteLayout"
 import { FaArrowLeft } from "react-icons/fa"
@@ -108,7 +109,7 @@ export default function PrivacyPolicyPage() {
             <h3 className="text-xl font-semibold">Questions about your data?</h3>
             <p className="mt-2 text-gray-400">Contact us directly and we will respond within 24 hours.</p>
             <a
-              href="/contact.html"
+              href="/contact"
               className="mt-6 inline-flex rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 px-8 py-3 font-semibold text-white transition hover:scale-105"
             >
               Contact Us

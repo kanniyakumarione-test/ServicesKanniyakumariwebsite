@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion"
 import { FaArrowLeft } from "react-icons/fa"
 import SiteLayout from "../components/SiteLayout"
@@ -13,7 +14,7 @@ export default function SeoStrategiesPage() {
             className="mb-6"
           >
             <a
-              href="/blog.html"
+              href="/blog"
               className="inline-flex items-center gap-2 text-sm text-blue-300 transition hover:text-white"
             >
               <FaArrowLeft className="text-xs" />
@@ -88,7 +89,7 @@ export default function SeoStrategiesPage() {
                 We handle deep technical SEO audits and complete content restructuring for businesses that need to dominate local search.
               </p>
               <a
-                href="/contact.html"
+                href="/contact"
                 className="mt-8 inline-flex rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 px-8 py-4 font-bold tracking-wide text-white transition hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/25"
               >
                 Request an SEO Audit
