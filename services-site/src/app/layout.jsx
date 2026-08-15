@@ -1,21 +1,30 @@
+import { Inter, Syne, Playfair_Display, Montserrat } from "next/font/google";
 import "../index.css";
+import CursorGrid from "../components/CursorGrid";
+import LenisProvider from "../components/LenisProvider";
+import Preloader from "../components/Preloader";
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const syne = Syne({ subsets: ["latin"], variable: "--font-syne" });
+const playfair = Playfair_Display({ subsets: ["latin"], style: ["italic", "normal"], variable: "--font-playfair" });
+const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-montserrat" });
 
 export const viewport = { themeColor: "#020617" };
 
 export const metadata = {
-  metadataBase: new URL('https://services.kanniyakumarione.com'),
+  metadataBase: new URL('https://softgenz.kanniyakumarione.com'),
   title: {
-    default: "Web Design and Digital Services Worldwide | Kanniyakumarione",
-    template: "%s | Kanniyakumarione"
+    default: "Web Design and Digital Services Worldwide | SOFTGENZ",
+    template: "%s | SOFTGENZ"
   },
-  description: "Kanniyakumarione helps businesses worldwide with websites, custom software, automation, SEO, Google Business optimization, Google Ads, and Meta Ads.",
-  applicationName: "Kanniyakumarione",
-  authors: [{ name: "Kanniyakumarione" }],
+  description: "SOFTGENZ helps businesses worldwide with websites, custom software, automation, SEO, Google Business optimization, Google Ads, and Meta Ads.",
+  applicationName: "SOFTGENZ",
+  authors: [{ name: "SOFTGENZ" }],
   generator: 'Next.js',
   keywords: ['Web Design', 'Digital Services', 'SEO', 'Automation', 'Google Ads', 'Meta Ads', 'Custom Software'],
   referrer: 'origin-when-cross-origin',
-  creator: 'Kanniyakumarione',
-  publisher: 'Kanniyakumarione',
+  creator: 'SOFTGENZ',
+  publisher: 'SOFTGENZ',
   robots: {
     index: true,
     follow: true,
@@ -29,16 +38,16 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Web Design and Digital Services Worldwide | Kanniyakumarione",
+    title: "Web Design and Digital Services Worldwide | SOFTGENZ",
     description: "Explore websites, software, automation, SEO, Google Business setup, Google Ads, and Meta Ads for businesses worldwide.",
-    url: "https://services.kanniyakumarione.com/",
-    siteName: "Kanniyakumarione",
+    url: "https://softgenz.kanniyakumarione.com/",
+    siteName: "SOFTGENZ",
     images: [
       {
         url: "/og-image.svg",
         width: 1200,
         height: 630,
-        alt: "Kanniyakumarione web design and digital services for global businesses",
+        alt: "SOFTGENZ web design and digital services for global businesses",
       },
     ],
     locale: "en_US",
@@ -46,11 +55,13 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Web Design and Digital Services Worldwide | Kanniyakumarione",
+    title: "Web Design and Digital Services Worldwide | SOFTGENZ",
     description: "Websites, software, automation, SEO, Google Business support, Google Ads, and Meta Ads for businesses globally.",
     images: ["/og-image.svg"],
   },
-  
+  icons: {
+    icon: '/softgenz.ico',
+  },
 };
 
 const jsonLd = {
@@ -58,13 +69,13 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "ProfessionalService",
-      "@id": "https://services.kanniyakumarione.com/#business",
-      "name": "Kanniyakumarione",
-      "url": "https://services.kanniyakumarione.com/",
-      "image": "https://services.kanniyakumarione.com/og-image.svg",
-      "logo": "https://services.kanniyakumarione.com/favicon.ico",
+      "@id": "https://softgenz.kanniyakumarione.com/#business",
+      "name": "SOFTGENZ",
+      "url": "https://softgenz.kanniyakumarione.com/",
+      "image": "https://softgenz.kanniyakumarione.com/og-image.svg",
+      "logo": "https://softgenz.kanniyakumarione.com/favicon.ico",
       "description": "Website development, custom software, automation, SEO, Google Business Profile optimization, Google Ads, and Meta Ads for businesses worldwide.",
-      "email": "mailto:kanniyakumarione@gmail.com",
+      "email": "mailto:softgenz@gmail.com",
       "telephone": "+91 73588 47752",
       "areaServed": ["Worldwide", "India", "United Kingdom", "United States", "Australia", "Canada", "Singapore"],
       "address": {
@@ -77,7 +88,7 @@ const jsonLd = {
         "@type": "ContactPoint",
         "contactType": "customer support",
         "telephone": "+91 73588 47752",
-        "email": "kanniyakumarione@gmail.com",
+        "email": "softgenz@gmail.com",
         "areaServed": "Worldwide",
         "availableLanguage": ["English", "Tamil"]
       }
@@ -87,17 +98,25 @@ const jsonLd = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${syne.variable} ${playfair.variable} ${montserrat.variable}`}>
       <head>
         <meta name="google-site-verification" content="ZjbjkFkgwBISuhMoaGCaApgCYvw_pJanlm0lmKUJNIg" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/softgenz.ico" />
         <link rel="manifest" href="/site.webmanifest" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body>{children}</body>
+      <body className="relative bg-[#050505] font-sans text-white selection:bg-amber-500 selection:text-black">
+        <Preloader />
+        <LenisProvider>
+          <div className="fixed inset-0 -z-50 overflow-hidden bg-[#050505]">
+            <CursorGrid color="#fbbf24" cellRadius={4} />
+          </div>
+          <div className="relative z-10">{children}</div>
+        </LenisProvider>
+      </body>
     </html>
   );
 }

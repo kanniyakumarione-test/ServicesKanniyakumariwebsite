@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Website and Digital Services Worldwide | Kanniyakumarione",
+  title: "Website and Digital Services Worldwide | SOFTGENZ",
   description: "Explore website development, custom software, automation, SEO, Google Business optimization, Google Ads, and Meta Ads globally.",
 };
 

@@ -31,7 +31,7 @@ const sections = [
   },
   {
     title: "7. Your Rights",
-    body: `You have the right to request deletion or correction of any personal data you have shared with us. To do so, contact us directly at kanniyakumarione@gmail.com or via WhatsApp at +91 73588 47752 and we will respond promptly.`,
+    body: `You have the right to request deletion or correction of any personal data you have shared with us. To do so, contact us directly at softgenz@gmail.com or via WhatsApp at +91 73588 47752 and we will respond promptly.`,
   },
   {
     title: "8. Changes to This Policy",
@@ -39,7 +39,7 @@ const sections = [
   },
   {
     title: "9. Contact",
-    body: `For any privacy-related questions, contact us at:\n\nEmail: kanniyakumarione@gmail.com\nPhone: +91 73588 47752\nLocation: Nagercoil, Tamil Nadu, India`,
+    body: `For any privacy-related questions, contact us at:\n\nEmail: softgenz@gmail.com\nPhone: +91 73588 47752\nLocation: Nagercoil, Tamil Nadu, India`,
   },
 ]
 
@@ -55,7 +55,7 @@ export default function PrivacyPolicyPage() {
           >
             <Link
               href="/"
-              className="inline-flex items-center gap-2 text-sm text-blue-300 transition hover:text-white"
+              className="inline-flex items-center gap-2 text-sm text-yellow-300 transition hover:text-white"
             >
               <FaArrowLeft className="text-xs" />
               Back to Home
@@ -67,23 +67,23 @@ export default function PrivacyPolicyPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
           >
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-300">
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-yellow-300">
               Legal
             </p>
             <h1 className="mt-4 text-4xl font-extrabold leading-tight md:text-5xl">
               Privacy{" "}
-              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-400 bg-clip-text text-transparent">
                 Policy
               </span>
             </h1>
             <p className="mt-4 text-gray-400">
-              Last updated: May 20, 2026 &nbsp;·&nbsp; Kanniyakumarione, Nagercoil, Tamil Nadu
+              Last updated: May 20, 2026 &nbsp;·&nbsp; SOFTGENZ, Nagercoil, Tamil Nadu
             </p>
 
             <p className="mt-8 text-lg text-gray-300">
-              Kanniyakumarione (&ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;) operates the website at{" "}
-              <Link href="https://services.kanniyakumarione.com" className="text-blue-300 underline hover:text-white">
-                services.kanniyakumarione.com
+              SOFTGENZ (&ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;) operates the website at{" "}
+              <Link href="https://softgenz.kanniyakumarione.com" className="text-yellow-300 underline hover:text-white">
+                softgenz.kanniyakumarione.com
               </Link>
               . This page explains what information we collect, how we use it, and your rights regarding your personal data.
             </p>
@@ -106,12 +106,12 @@ export default function PrivacyPolicyPage() {
             ))}
           </div>
 
-          <div className="mt-12 rounded-2xl border border-blue-400/20 bg-gradient-to-br from-blue-500/10 to-transparent p-8 text-center">
+          <div className="mt-12 rounded-2xl border border-yellow-400/20 bg-gradient-to-br from-yellow-500/10 to-transparent p-8 text-center">
             <h3 className="text-xl font-semibold">Questions about your data?</h3>
             <p className="mt-2 text-gray-400">Contact us directly and we will respond within 24 hours.</p>
             <Link
               href="/contact"
-              className="mt-6 inline-flex rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 px-8 py-3 font-semibold text-white transition hover:scale-105"
+              className="mt-6 inline-flex rounded-xl bg-gradient-to-r from-yellow-500 to-amber-600 px-8 py-3 font-semibold text-white transition hover:scale-105"
             >
               Contact Us
             </Link>

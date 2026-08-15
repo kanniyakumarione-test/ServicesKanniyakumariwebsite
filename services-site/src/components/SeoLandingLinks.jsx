@@ -84,10 +84,10 @@ export default function SeoLandingLinks() {
           transition={{ duration: 0.6 }}
           className="mx-auto mb-16 max-w-3xl text-center"
         >
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-300">SEO Pages</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-yellow-300">SEO Pages</p>
           <h2 id="seo-pages-heading" className="mt-6 text-4xl font-bold md:text-5xl">
             Search-Focused Pages for
-            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-400 bg-clip-text text-transparent">
               {" "}
               Local Visibility
             </span>
@@ -106,11 +106,11 @@ export default function SeoLandingLinks() {
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.08 }}
-              className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl transition hover:-translate-y-1 hover:border-blue-400/40"
+              className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl transition hover:-translate-y-1 hover:border-yellow-400/40"
             >
               <h3 className="text-2xl font-semibold">{page.title}</h3>
               <p className="mt-4 text-gray-400">{page.desc}</p>
-              <span className="mt-6 inline-block text-sm font-semibold text-blue-300">Open page</span>
+              <span className="mt-6 inline-block text-sm font-semibold text-yellow-300">Open page</span>
             </motion.a>
           ))}
         </div>

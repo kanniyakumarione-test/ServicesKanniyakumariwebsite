@@ -16,7 +16,7 @@ export default function HowToGrowPage() {
           >
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 text-sm text-blue-300 transition hover:text-white"
+              className="inline-flex items-center gap-2 text-sm text-yellow-300 transition hover:text-white"
             >
               <FaArrowLeft className="text-xs" />
               Back to Blog
@@ -26,7 +26,7 @@ export default function HowToGrowPage() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="mb-8 inline-block rounded-full border border-blue-500/30 bg-blue-500/10 px-5 py-2 text-sm font-semibold text-blue-300 backdrop-blur-xl"
+            className="mb-8 inline-block rounded-full border border-yellow-500/30 bg-yellow-500/10 px-5 py-2 text-sm font-semibold text-yellow-300 backdrop-blur-xl"
           >
             Business Strategy &bull; April 17, 2026
           </motion.div>
@@ -39,7 +39,7 @@ export default function HowToGrowPage() {
             className="text-4xl font-extrabold leading-tight md:text-5xl lg:text-6xl"
           >
             How to Grow Your Business in{" "}
-            <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-sky-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-yellow-400 via-amber-400 to-sky-400 bg-clip-text text-transparent">
               Kanyakumari Online
             </span>
           </motion.h1>
@@ -69,7 +69,7 @@ export default function HowToGrowPage() {
 
             <h2 className="mt-12 text-3xl font-bold text-white">2. A Fast, SEO-Optimized Website</h2>
             <p>
-              Social media is borrowed space. Your website is your digital storefront. An optimized website not only makes your brand look highly credible, but it is necessary to capture "high-intent" local SEO keywords like <em className="text-white">Website Developer in Nagercoil</em> or <em className="text-white">Travel Agency Kanyakumari</em>.
+              Social media is borrowed space. Your website is your digital storefront. An optimized website not only makes your brand look highly credible, but it is necessary to capture "high-intent" local SEO keywords like <em className="text-white">Website Developer in Nagercoil</em> or <em className="text-white">Travel Company Kanyakumari</em>.
             </p>
 
             <h2 className="mt-12 text-3xl font-bold text-white">3. Targeted Meta and Google Ads</h2>
@@ -77,14 +77,14 @@ export default function HowToGrowPage() {
               Once your organic foundation (Website + Google Business) is set, you can scale predictability using Meta Ads and Google Ads. Because the Kanyakumari district has specific demographic pockets, Meta Ads can be remarkably cheap and effective when targeted properly.
             </p>
 
-            <div className="mt-16 rounded-3xl border border-blue-500/20 bg-gradient-to-br from-blue-500/10 to-transparent p-8">
+            <div className="mt-16 rounded-3xl border border-yellow-500/20 bg-gradient-to-br from-yellow-500/10 to-transparent p-8">
               <h3 className="text-2xl font-bold text-white">Ready to grow?</h3>
               <p className="mt-2 text-gray-300">
-                Kanniyakumarione helps local businesses establish powerful online presences. Connect with us today to start your digital transformation.
+                SOFTGENZ helps local businesses establish powerful online presences. Connect with us today to start your digital transformation.
               </p>
               <Link
                 href="/contact"
-                className="mt-6 inline-flex rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 px-6 py-3 font-semibold text-white transition hover:scale-105"
+                className="mt-6 inline-flex rounded-xl bg-gradient-to-r from-yellow-500 to-amber-500 px-6 py-3 font-semibold text-white transition hover:scale-105"
               >
                 Book a Consultation
               </Link>

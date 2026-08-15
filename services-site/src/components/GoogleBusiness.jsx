@@ -77,13 +77,13 @@ export default function GoogleBusiness() {
           transition={{ duration: 0.6 }}
           className="mb-24 text-center"
         >
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-300">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-yellow-300">
             Google Business Profile
           </p>
 
           <h2 id="google-business-heading" className="mt-6 text-4xl font-bold md:text-6xl">
             Get Customers from
-            <span className="bg-gradient-to-r from-blue-400 via-red-400 to-yellow-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-yellow-400 via-red-400 to-yellow-400 bg-clip-text text-transparent">
               {" "}
               Google Maps
             </span>
@@ -106,10 +106,10 @@ export default function GoogleBusiness() {
               whileHover={{ y: -10 }}
               className="group relative rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl md:p-8"
             >
-              <div className="mb-5 text-3xl text-blue-400">{feature.icon}</div>
+              <div className="mb-5 text-3xl text-yellow-400">{feature.icon}</div>
               <h3 className="mb-3 text-xl font-semibold">{feature.title}</h3>
               <p className="text-sm text-gray-400">{feature.desc}</p>
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/10 via-red-500/10 to-yellow-500/10 opacity-0 transition group-hover:opacity-100" />
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-yellow-500/10 via-red-500/10 to-yellow-500/10 opacity-0 transition group-hover:opacity-100" />
             </motion.div>
           ))}
         </div>
@@ -149,11 +149,11 @@ export default function GoogleBusiness() {
               transition={{ delay: index * 0.15 }}
               whileHover={{ y: -12 }}
               className={`relative rounded-3xl border p-6 backdrop-blur-xl md:p-10 ${
-                plan.popular ? "scale-105 border-blue-400 bg-white/10" : "border-white/10 bg-white/5"
+                plan.popular ? "scale-105 border-yellow-400 bg-white/10" : "border-white/10 bg-white/5"
               }`}
             >
               {plan.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-blue-500 to-red-500 px-4 py-1 text-xs">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-yellow-500 to-red-500 px-4 py-1 text-xs">
                   Most Popular
                 </div>
               )}
@@ -174,7 +174,7 @@ export default function GoogleBusiness() {
                 href="https://wa.me/917358847752"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block rounded-xl bg-gradient-to-r from-blue-500 to-red-500 py-3 text-center transition hover:scale-105"
+                className="block rounded-xl bg-gradient-to-r from-yellow-500 to-red-500 py-3 text-center transition hover:scale-105"
               >
                 Get Started
               </Link>
@@ -193,7 +193,7 @@ export default function GoogleBusiness() {
             href="https://wa.me/917358847752"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-xl bg-gradient-to-r from-blue-500 to-red-500 px-8 py-4 transition hover:scale-105"
+            className="rounded-xl bg-gradient-to-r from-yellow-500 to-red-500 px-8 py-4 transition hover:scale-105"
           >
             Setup My Google Business
           </Link>

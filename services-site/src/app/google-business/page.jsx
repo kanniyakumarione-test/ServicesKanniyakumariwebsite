@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Google Business Profile Services | Kanniyakumarione",
+  title: "Google Business Profile Services | SOFTGENZ",
   description: "Google Business Profile setup, optimization, Maps visibility, and local SEO support for businesses worldwide.",
 };
 

@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "FAQ | Kanniyakumarione",
+  title: "FAQ | SOFTGENZ",
   description: "Frequently asked questions about website pricing, delivery time, support, domain setup, hosting, and SEO services.",
 };
 

@@ -1,6 +1,9 @@
 "use client";
 import Link from 'next/link';
 import { motion } from "framer-motion"
+import { FaCheck } from "react-icons/fa"
+import BorderGlow from './BorderGlow';
+import LightTunnel from './LightTunnel';
 
 export default function Pricing({ hideHeader = false }) {
   const plans = [
@@ -66,10 +69,10 @@ export default function Pricing({ hideHeader = false }) {
             transition={{ duration: 0.6 }}
             className="mb-16 text-center"
           >
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-300">Pricing</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-yellow-300">Pricing</p>
             <h2 id="pricing-heading" className="mt-8 text-4xl font-bold leading-tight md:text-6xl">
               Affordable
-              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-400 bg-clip-text text-transparent">
                 {" "}
                 Service Packages
               </span>
@@ -83,69 +86,77 @@ export default function Pricing({ hideHeader = false }) {
           </motion.div>
         )}
 
-        <div className="mt-20 grid items-stretch gap-10 lg:grid-cols-3">
-          {plans.map((plan) => {
+        <div className="mt-20 flex flex-col gap-6 max-w-6xl mx-auto">
+          {plans.map((plan, index) => {
             const isPopular = plan.popular
 
             return (
               <motion.div
                 key={plan.name}
-                whileHover={{ y: -12, scale: 1.02 }}
-                transition={{ type: "spring", stiffness: 200 }}
-                className={`relative flex h-full rounded-3xl p-[1px] ${
-                  isPopular
-                    ? "bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"
-                    : "bg-white/10"
-                }`}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="w-full group hover:-translate-y-1 transition-transform duration-300"
               >
-                <div
-                  className={`flex h-full w-full flex-col rounded-3xl p-6 backdrop-blur-xl md:p-10 ${
-                    isPopular ? "bg-black/70" : "bg-black/60"
-                  }`}
+                <BorderGlow
+                  borderRadius={32}
+                  backgroundColor={isPopular ? "#0a0a0a" : "#050505"}
+                  glowColor={isPopular ? "40 90% 50%" : "40 20% 30%"}
+                  animated={isPopular}
+                  className="w-full"
                 >
-                  {isPopular && (
-                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 px-5 py-1 text-xs font-semibold shadow-lg">
-                      Most Popular
-                    </div>
-                  )}
+                  <div className="flex flex-col lg:flex-row items-start lg:items-center gap-10 lg:gap-16 p-8 md:p-12 relative z-20 w-full">
+                    {/* Popular Highlight Badge */}
+                    {isPopular && (
+                      <div className="absolute top-0 right-10 -translate-y-1/2 rounded-full border border-amber-500/50 bg-[#0a0a0a] px-4 py-1 text-[10px] font-bold uppercase tracking-widest text-amber-500 shadow-[0_0_20px_rgba(245,158,11,0.2)] z-30">
+                        Most Popular
+                      </div>
+                    )}
 
-                  <h3 className="mb-3 text-2xl font-bold">{plan.name}</h3>
-                  <p className="mb-6 text-sm text-gray-400">{plan.tag}</p>
+                    {/* Left: Title & Price */}
+                    <div className="w-full lg:w-[30%] flex flex-col">
+                      <h3 className={`text-2xl md:text-3xl font-display font-medium mb-2 ${isPopular ? "text-amber-500" : "text-white"}`}>
+                        {plan.name}
+                      </h3>
+                      <p className="text-sm text-gray-500 font-light mb-8 lg:mb-12">{plan.tag}</p>
 
-                  <div className="mb-10 flex flex-col gap-1">
-                    <div className="flex items-end gap-2">
-                      <span className="text-4xl font-bold">{plan.price}</span>
-                      <span className="text-sm text-gray-400">/project</span>
+                      <div className="flex items-end gap-2">
+                        <span className="text-4xl md:text-5xl font-display font-medium tracking-tight text-white">{plan.price}</span>
+                      </div>
+                      <div className="text-sm text-gray-500 font-light mt-2">
+                        or {plan.usdPrice} / project
+                      </div>
                     </div>
-                    <div className="text-sm text-cyan-300 font-medium">
-                      or {plan.usdPrice}
+
+                    {/* Middle: Features */}
+                    <div className="w-full lg:w-[45%]">
+                      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
+                        {plan.features.map((feature) => (
+                          <li key={feature} className="flex items-start gap-3 text-sm text-gray-400 font-light leading-relaxed">
+                            <FaCheck className={`shrink-0 mt-1 ${isPopular ? "text-amber-500" : "text-gray-600"}`} size={12} />
+                            <span>{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* Right: CTA */}
+                    <div className="w-full lg:w-[25%] flex justify-start lg:justify-end mt-4 lg:mt-0">
+                      <Link
+                        href="https://wa.me/917358847752"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`block w-full lg:w-auto px-8 py-4 rounded-full text-center text-sm font-bold uppercase tracking-widest transition-all duration-300 ${
+                          isPopular
+                            ? "bg-amber-500 text-black hover:bg-amber-400 hover:shadow-[0_0_20px_rgba(245,158,11,0.4)]"
+                            : "border border-white/10 text-white hover:border-white/30 hover:bg-white/5"
+                        }`}
+                      >
+                        Start Project
+                      </Link>
                     </div>
                   </div>
-
-                  <ul className="mb-10 flex-1 space-y-4">
-                    {plan.features.map((feature) => (
-                      <li key={feature} className="flex items-center gap-3 text-sm text-gray-300">
-                        <div className="flex min-w-8 items-center justify-center rounded-full bg-green-500/20 px-2 py-1 text-[10px] font-semibold uppercase tracking-wide text-green-300">
-                          Yes
-                        </div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-
-                  <Link
-                    href="https://wa.me/917358847752"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`block rounded-xl py-4 text-center font-semibold transition ${
-                      isPopular
-                        ? "bg-gradient-to-r from-blue-500 to-purple-500 hover:scale-105"
-                        : "bg-white/10 hover:bg-white/20"
-                    }`}
-                  >
-                    Start This Project
-                  </Link>
-                </div>
+                </BorderGlow>
               </motion.div>
             )
           })}
@@ -155,24 +166,65 @@ export default function Pricing({ hideHeader = false }) {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mt-24 text-center"
+          className="mt-32 relative overflow-hidden rounded-[2rem] border border-white/5"
         >
-          <h3 className="mb-6 text-3xl font-bold">Why Businesses Choose Us</h3>
+          {/* WebGL Tunnel Background */}
+          <div className="absolute inset-0 z-0">
+            <LightTunnel 
+              cableColor="#f59e0b"
+              pulseColor="#fcd34d"
+              tunnelColor="#000000"
+              tunnelOpacity={0.8}
+              speed={0.03}
+              glow={0.3}
+              opacity={0.4}
+            />
+            {/* Fade edges so text is perfectly readable */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-transparent to-[#050505]" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-[#050505] opacity-80" />
+            <div className="absolute inset-0 bg-[#050505]/40" />
+          </div>
 
-          <div className="grid gap-10 text-gray-400 md:grid-cols-3">
-            <div>
-              <h4 className="mb-2 text-xl font-semibold text-white">Fast Delivery</h4>
-              <p>Most website and campaign setups move quickly with a clear execution plan.</p>
+          <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 relative z-10 p-8 lg:p-16">
+            <div className="lg:w-1/3 flex flex-col justify-center">
+              <h3 className="text-4xl md:text-5xl font-display font-medium text-white tracking-tight leading-tight">
+                Why Businesses <span className="block text-amber-500 font-light">Choose Us</span>
+              </h3>
+              <p className="mt-8 text-gray-300 font-light leading-relaxed max-w-sm">
+                We deliver high-end digital solutions focused on measurable results, zero friction, and streamlined operations.
+              </p>
             </div>
 
-            <div>
-              <h4 className="mb-2 text-xl font-semibold text-white">Flexible Scope</h4>
-              <p>We can combine websites, automation, SEO, and ad support in one package.</p>
-            </div>
+            <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-3 gap-10">
+              <div className="relative group">
+                <div className="mb-8 w-14 h-14 rounded-full border border-white/20 bg-black/50 backdrop-blur-md shadow-lg flex items-center justify-center text-amber-500 font-display text-xl transition-all duration-500 group-hover:border-amber-500/80 group-hover:bg-amber-500/20 group-hover:-translate-y-1">
+                  01
+                </div>
+                <h4 className="mb-4 text-xl font-display font-medium text-white group-hover:text-amber-500 transition-colors">Fast Delivery</h4>
+                <p className="text-sm text-gray-300 font-light leading-relaxed">
+                  Most website and campaign setups move quickly with a highly structured and clear execution plan.
+                </p>
+              </div>
 
-            <div>
-              <h4 className="mb-2 text-xl font-semibold text-white">Business Growth</h4>
-              <p>Services are planned to improve leads, conversions, and day-to-day operations.</p>
+              <div className="relative group md:mt-12">
+                <div className="mb-8 w-14 h-14 rounded-full border border-white/20 bg-black/50 backdrop-blur-md shadow-lg flex items-center justify-center text-amber-500 font-display text-xl transition-all duration-500 group-hover:border-amber-500/80 group-hover:bg-amber-500/20 group-hover:-translate-y-1">
+                  02
+                </div>
+                <h4 className="mb-4 text-xl font-display font-medium text-white group-hover:text-amber-500 transition-colors">Flexible Scope</h4>
+                <p className="text-sm text-gray-300 font-light leading-relaxed">
+                  We seamlessly combine websites, advanced automation, SEO, and ad support into one unified package.
+                </p>
+              </div>
+
+              <div className="relative group md:mt-24">
+                <div className="mb-8 w-14 h-14 rounded-full border border-white/20 bg-black/50 backdrop-blur-md shadow-lg flex items-center justify-center text-amber-500 font-display text-xl transition-all duration-500 group-hover:border-amber-500/80 group-hover:bg-amber-500/20 group-hover:-translate-y-1">
+                  03
+                </div>
+                <h4 className="mb-4 text-xl font-display font-medium text-white group-hover:text-amber-500 transition-colors">Business Growth</h4>
+                <p className="text-sm text-gray-300 font-light leading-relaxed">
+                  Every service is meticulously planned to improve leads, increase conversions, and simplify day-to-day operations.
+                </p>
+              </div>
             </div>
           </div>
         </motion.div>

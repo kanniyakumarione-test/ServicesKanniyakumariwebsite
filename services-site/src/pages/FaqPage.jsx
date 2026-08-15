@@ -11,7 +11,7 @@ export default function FaqPage() {
         eyebrow="Frequently Asked Questions"
         title="Answers People Ask Before Starting a"
         highlight="Digital Project"
-        description="This standalone FAQ page covers pricing, delivery time, hosting, support, and project expectations so visitors can get clarity quickly."
+        description="Find clear answers about pricing, delivery time, hosting, support, and project expectations to get clarity quickly."
       />
       <Faq hideHeader={true} />
       <ContactSection />

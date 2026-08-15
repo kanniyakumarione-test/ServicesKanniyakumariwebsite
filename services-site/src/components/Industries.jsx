@@ -22,10 +22,10 @@ export default function Industries() {
           transition={{ duration: 0.6 }}
           className="mx-auto mb-16 max-w-3xl text-center"
         >
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-300">Industries We Serve</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-yellow-300">Industries We Serve</p>
           <h2 id="industries-heading" className="mt-6 text-4xl font-bold md:text-5xl">
             Digital Services for
-            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-400 bg-clip-text text-transparent">
               {" "}
               Everyday Local Businesses
             </span>

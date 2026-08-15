@@ -9,10 +9,9 @@ export default function PortfolioPage() {
   return (
     <SiteLayout>
       <PageHero
-        eyebrow="Portfolio"
         title="See the Kind of Websites and"
         highlight="Digital Projects We Build"
-        description="This page brings together project samples, case studies, and before-and-after improvements so visitors can review your work like a full service website."
+        description="Explore our project samples, case studies, and before-and-after improvements to see the quality of our work firsthand."
       />
       <Portfolio />
       <BeforeAfter />

@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "About Us | Kanniyakumarione",
-  description: "Learn about Kanniyakumarione, our mission, and how we deliver world-class digital services from Nagercoil to the globe.",
+  title: "About Us | SOFTGENZ",
+  description: "Learn about SOFTGENZ, our mission, and how we deliver world-class digital services from Nagercoil to the globe.",
 };
 
 import AboutPage from "@/pages/AboutPage";

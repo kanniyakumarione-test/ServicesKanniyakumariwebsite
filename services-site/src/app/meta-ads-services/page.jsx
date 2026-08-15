@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Meta Ads Services | Kanniyakumarione",
+  title: "Meta Ads Services | SOFTGENZ",
   description: "Meta Ads services for Facebook and Instagram campaigns, awareness, lead generation, and offer promotion worldwide.",
 };
 

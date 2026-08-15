@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Photo Editing Services | Kanniyakumarione",
+  title: "Photo Editing Services | SOFTGENZ",
   description: "Photo editing services for products, campaigns, social media, branding, and business visuals worldwide.",
 };
 

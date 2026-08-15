@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "AI Services | Kanniyakumarione",
+  title: "AI Services | SOFTGENZ",
   description: "AI services for chatbots, workflow support, content help, automation, and business process improvement worldwide.",
 };
 

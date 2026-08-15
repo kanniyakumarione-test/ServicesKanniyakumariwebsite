@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Portfolio and Case Studies | Kanniyakumarione",
-  description: "See website projects, digital case studies, before-and-after transformations, and practical business results from Kanniyakumarione.",
+  title: "Portfolio and Case Studies | SOFTGENZ",
+  description: "See website projects, digital case studies, before-and-after transformations, and practical business results from SOFTGENZ.",
 };
 
 import PortfolioPage from "@/pages/PortfolioPage";

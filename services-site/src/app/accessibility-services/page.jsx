@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Web Accessibility Services | Kanniyakumarione",
+  title: "Web Accessibility Services | SOFTGENZ",
   description: "Ensure your website and software are WCAG compliant and usable for everyone with our accessibility audits and remediation services.",
 };
 

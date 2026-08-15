@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Data Annotation Services | Kanniyakumarione",
+  title: "Data Annotation Services | SOFTGENZ",
   description: "High-quality data annotation and labeling services for AI, machine learning, and computer vision models.",
 };
 

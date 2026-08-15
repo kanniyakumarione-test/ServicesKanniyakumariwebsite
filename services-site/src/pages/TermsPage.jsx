@@ -7,7 +7,7 @@ import { FaArrowLeft } from "react-icons/fa"
 const sections = [
   {
     title: "1. Acceptance of Terms",
-    body: `By accessing this website and engaging with Kanniyakumarione for services (including website development, software creation, AI implementation, automation, and digital marketing), you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, you should not use our services.`,
+    body: `By accessing this website and engaging with SOFTGENZ for services (including website development, software creation, AI implementation, automation, and digital marketing), you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, you should not use our services.`,
   },
   {
     title: "2. Service Scope and Deliverables",
@@ -23,7 +23,7 @@ const sections = [
   },
   {
     title: "5. Intellectual Property",
-    body: `Upon full and final payment, the client owns the rights to the final deliverables (website, software, graphics). However, Kanniyakumarione retains the right to use screenshots, links, and case studies of the completed project in our portfolio and marketing materials unless a strict Non-Disclosure Agreement (NDA) is signed prior to commencement.`,
+    body: `Upon full and final payment, the client owns the rights to the final deliverables (website, software, graphics). However, SOFTGENZ retains the right to use screenshots, links, and case studies of the completed project in our portfolio and marketing materials unless a strict Non-Disclosure Agreement (NDA) is signed prior to commencement.`,
   },
   {
     title: "6. Post-Launch Support",
@@ -35,7 +35,7 @@ const sections = [
   },
   {
     title: "8. Limitation of Liability",
-    body: `Kanniyakumarione shall not be liable for any indirect, incidental, or consequential damages (including loss of profits or data) arising out of the use or inability to use our services or deliverables. Our maximum liability shall not exceed the amount paid by the client for the specific service in question.`,
+    body: `SOFTGENZ shall not be liable for any indirect, incidental, or consequential damages (including loss of profits or data) arising out of the use or inability to use our services or deliverables. Our maximum liability shall not exceed the amount paid by the client for the specific service in question.`,
   },
 ]
 
@@ -51,7 +51,7 @@ export default function TermsPage() {
           >
             <Link
               href="/"
-              className="inline-flex items-center gap-2 text-sm text-blue-300 transition hover:text-white"
+              className="inline-flex items-center gap-2 text-sm text-yellow-300 transition hover:text-white"
             >
               <FaArrowLeft className="text-xs" />
               Back to Home
@@ -63,17 +63,17 @@ export default function TermsPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
           >
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-300">
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-yellow-300">
               Legal
             </p>
             <h1 className="mt-4 text-4xl font-extrabold leading-tight md:text-5xl">
               Terms of{" "}
-              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-400 bg-clip-text text-transparent">
                 Service
               </span>
             </h1>
             <p className="mt-4 text-gray-400">
-              Last updated: May 20, 2026 &nbsp;·&nbsp; Kanniyakumarione, Nagercoil, Tamil Nadu
+              Last updated: May 20, 2026 &nbsp;·&nbsp; SOFTGENZ, Nagercoil, Tamil Nadu
             </p>
           </motion.div>
 
@@ -94,12 +94,12 @@ export default function TermsPage() {
             ))}
           </div>
 
-          <div className="mt-12 rounded-2xl border border-blue-400/20 bg-gradient-to-br from-blue-500/10 to-transparent p-8 text-center">
+          <div className="mt-12 rounded-2xl border border-yellow-400/20 bg-gradient-to-br from-yellow-500/10 to-transparent p-8 text-center">
             <h3 className="text-xl font-semibold">Have questions about these terms?</h3>
             <p className="mt-2 text-gray-400">We prefer clear, honest agreements. Contact us if you need clarification.</p>
             <Link
               href="/contact"
-              className="mt-6 inline-flex rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 px-8 py-3 font-semibold text-white transition hover:scale-105"
+              className="mt-6 inline-flex rounded-xl bg-gradient-to-r from-yellow-500 to-amber-600 px-8 py-3 font-semibold text-white transition hover:scale-105"
             >
               Contact Us
             </Link>

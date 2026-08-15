@@ -8,7 +8,7 @@ export default function WebsiteDeveloperPage() {
       eyebrow="Website Developer in Nagercoil"
       title="SEO-Friendly Websites for"
       highlight="Businesses in Nagercoil"
-      description="Kanniyakumarione builds modern business websites for local brands that need stronger online trust, better Google visibility, and better support from a broader digital services partner."
+      description="SOFTGENZ builds modern business websites for local brands that need stronger online trust, better Google visibility, and better support from a broader digital services partner."
       snapshotTitle="Website Snapshot"
       snapshotItems={[
         { label: "Typical Focus", value: "Business websites, landing pages, and local SEO structure" },

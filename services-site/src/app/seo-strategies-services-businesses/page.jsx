@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Top 5 SEO Strategies for Services Businesses | Kanniyakumarione",
+  title: "Top 5 SEO Strategies for Services Businesses | SOFTGENZ",
   description: "Stop hiding on page 5 of Google. Here are the precise steps service businesses use to rank number one in Kanyakumari.",
 };
 

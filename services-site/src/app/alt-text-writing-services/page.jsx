@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Alt Text Writing Services | Kanniyakumarione",
+  title: "Alt Text Writing Services | SOFTGENZ",
   description: "Professional alt text writing for e-commerce, publishers, and websites to improve SEO and web accessibility compliance.",
 };
 

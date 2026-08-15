@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Custom Software Services | Kanniyakumarione",
+  title: "Custom Software Services | SOFTGENZ",
   description: "Custom software services for dashboards, billing systems, admin tools, attendance systems, and internal business applications worldwide.",
 };
 

@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 export default function sitemap() {
-  const baseUrl = 'https://services.kanniyakumarione.com';
+  const baseUrl = 'https://softgenz.kanniyakumarione.com';
 
   // We can hardcode the most important ones or read the directories
   const routes = [

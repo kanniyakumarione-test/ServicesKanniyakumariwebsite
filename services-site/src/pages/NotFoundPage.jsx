@@ -15,7 +15,7 @@ export default function NotFoundPage() {
             transition={{ duration: 0.6 }}
             className="mb-8"
           >
-            <p className="text-[10rem] font-extrabold leading-none bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent select-none">
+            <p className="text-[10rem] font-extrabold leading-none bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-400 bg-clip-text text-transparent select-none">
               404
             </p>
           </motion.div>
@@ -36,7 +36,7 @@ export default function NotFoundPage() {
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
               <Link
                 href="/"
-                className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 px-8 py-4 font-semibold transition hover:scale-105"
+                className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-yellow-500 to-amber-600 px-8 py-4 font-semibold transition hover:scale-105"
               >
                 <FaHome />
                 Go to Homepage
@@ -62,7 +62,7 @@ export default function NotFoundPage() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-gray-300 transition hover:border-blue-400/40 hover:text-white"
+                  className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-gray-300 transition hover:border-yellow-400/40 hover:text-white"
                 >
                   {link.label}
                 </Link>

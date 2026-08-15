@@ -1,4 +1,5 @@
 "use client";
+import { useState } from 'react';
 import Link from 'next/link';
 import { motion } from "framer-motion"
 import {
@@ -17,6 +18,11 @@ import {
   FaFileAlt,
   FaDatabase
 } from "react-icons/fa"
+import BorderGlow from './BorderGlow';
+import OptionWheel from './OptionWheel';
+import Folder from './Folder';
+import LightRays from './LightRays';
+import ScrollStack, { ScrollStackItem } from './ScrollStack';
 
 const serviceGroups = [
   {
@@ -202,6 +208,13 @@ const serviceGroups = [
 ]
 
 export default function Services({ variant = "full", hideHeader = false }) {
+  const [selectedServiceIndex, setSelectedServiceIndex] = useState(0);
+  const [isFolderOpen, setIsFolderOpen] = useState(false);
+
+  const allServices = serviceGroups.flatMap(g => g.services);
+  const serviceTitles = allServices.map(s => s.title);
+  const selectedService = allServices[selectedServiceIndex];
+
   const compactGroups = serviceGroups.map((group) => ({
     ...group,
     items: group.services.slice(0, 4).map((service) => ({
@@ -217,19 +230,19 @@ export default function Services({ variant = "full", hideHeader = false }) {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="mb-20 text-center"
+            className="mb-24 text-center"
           >
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-300">Services</p>
-            <h2 id="services-heading" className="mt-6 text-4xl font-bold md:text-5xl">
-              Digital Solutions for
-              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                {" "}
+            <p className="font-display text-[10px] md:text-xs font-bold uppercase tracking-[0.4em] text-amber-500/80 mb-6">Services</p>
+            <h2 id="services-heading" className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight text-white">
+              Digital Solutions for<br />
+              <span className="font-editorial italic font-medium bg-gradient-to-r from-amber-200 via-amber-400 to-amber-600 bg-clip-text text-transparent mt-2 block tracking-normal">
                 Modern Businesses
               </span>
             </h2>
 
-            <p className="mx-auto mt-6 max-w-3xl text-gray-400">
+            <p className="mx-auto mt-8 max-w-2xl text-gray-400 font-light leading-relaxed text-sm md:text-base">
               We help businesses worldwide grow with websites, custom software, AI, automation,
               SEO, Google Business optimization, paid ads, and creative content services
               designed for performance, visibility, and scalable digital growth.
@@ -244,161 +257,233 @@ export default function Services({ variant = "full", hideHeader = false }) {
                 key={group.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.08 }}
-                className="flex flex-col rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl"
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.08, duration: 0.5 }}
+                className="group relative flex flex-col h-full"
               >
-                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-blue-300">
+                <BorderGlow
+                  className="flex flex-col h-full p-8 md:p-10 transition-transform duration-500 hover:-translate-y-2 cursor-pointer"
+                  backgroundColor="#0a0a0a"
+                  glowColor="38 92 50"
+                >
+
+                <p className="relative z-10 font-display text-[11px] font-bold uppercase tracking-[0.22em] text-amber-500">
                   {group.title}
                 </p>
-                <p className="mt-4 text-gray-400">{group.summary}</p>
-                <div className="mt-6 flex flex-wrap gap-3">
+                <p className="relative z-10 mt-4 text-base font-light text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
+                  {group.summary}
+                </p>
+                
+                <div className="relative z-10 mt-8 flex flex-wrap gap-3">
                   {group.items.map((item) => (
                     <Link
                       key={item.label}
                       href={item.href}
-                      className="rounded-full border border-white/10 bg-black/20 px-4 py-2 text-sm text-gray-200 transition hover:border-blue-400/40 hover:text-white"
+                      className="rounded-full border border-white/10 bg-white/[0.02] px-5 py-2.5 text-xs font-medium tracking-wide text-gray-400 transition-all hover:border-amber-500/40 hover:bg-amber-500/5 hover:text-amber-100"
                     >
                       {item.label}
                     </Link>
                   ))}
                 </div>
+                
                 <Link
                   href="/services"
-                  className="mt-auto pt-8 inline-flex items-center gap-1 text-sm font-medium text-blue-300 transition hover:text-white"
+                  className="relative z-10 mt-auto pt-10 inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-wider text-amber-500/80 transition-all hover:text-amber-400 hover:gap-3"
                 >
-                  View all services →
+                  View all services <span>&rarr;</span>
                 </Link>
+                </BorderGlow>
               </motion.div>
             ))}
           </div>
         ) : (
-          <div className="space-y-12">
-            {serviceGroups.map((group, groupIndex) => (
-              <section key={group.title} aria-labelledby={`group-${groupIndex}`}>
-                <motion.div
-                  initial={{ opacity: 0, y: 24 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: groupIndex * 0.05 }}
-                  className="mb-8 flex flex-col gap-3 md:flex-row md:items-end md:justify-between"
-                >
-                  <div>
-                    <p className="text-sm font-semibold uppercase tracking-[0.22em] text-blue-300">
-                      Category
-                    </p>
-                    <h3 id={`group-${groupIndex}`} className="mt-3 text-3xl font-bold">
-                      {group.title}
-                    </h3>
-                  </div>
-                  <p className="max-w-2xl text-gray-400">{group.summary}</p>
-                </motion.div>
-
-                <div className="grid gap-10 md:grid-cols-2">
-                  {group.services.map((service, index) => (
-                    <motion.div
-                      key={service.title}
-                      initial={{ opacity: 0, y: 40 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ delay: index * 0.08 }}
-                      whileHover={{ y: -10 }}
-                      className={`group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl md:p-10 ${
-                        group.services.length === 3 && index === 2 ? "md:col-span-2" : ""
-                      }`}
-                    >
-                      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-purple-500/0 to-pink-500/0 transition duration-500 group-hover:via-purple-500/20" />
-                      <div className="mb-6 text-3xl text-blue-400">{service.icon}</div>
-
-                      <h4 className="mb-4 text-2xl font-semibold">{service.title}</h4>
-                      <p className="mb-6 text-gray-400">{service.desc}</p>
-
-                      <ul className="space-y-2">
-                        {service.features.map((feature) => (
-                          <li key={feature} className="flex items-center gap-2 text-sm text-gray-300">
-                            <FaCheckCircle className="text-green-400" />
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-
-                      <Link
-                        href={service.href}
-                        className="relative z-10 mt-6 inline-flex rounded-xl border border-white/15 px-4 py-2 text-sm font-semibold text-blue-300 transition hover:border-blue-400/40 hover:text-white"
-                      >
-                        View service page
-                      </Link>
-                    </motion.div>
-                  ))}
+          <div className="relative min-h-[600px] w-full flex flex-col justify-center items-center">
+            
+            {/* Initial Folder State */}
+            {!isFolderOpen && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                className="flex flex-col items-center justify-center space-y-12"
+              >
+                <div className="text-center">
+                  <h3 className="font-display text-2xl font-bold text-white mb-2">Service Catalog</h3>
+                  <p className="text-gray-400">Click to explore our offerings</p>
                 </div>
-              </section>
-            ))}
-          </div>
+                
+                <Folder 
+                  onOpen={() => setIsFolderOpen(true)}
+                  className="mt-8 mb-16"
+                  items={[
+                    <div key="1" className="w-full h-full bg-[#151515] rounded-xl p-4 flex flex-col gap-3 border border-white/5 shadow-2xl">
+                      <div className="h-2 w-3/4 bg-white/10 rounded-full" />
+                      <div className="h-2 w-1/2 bg-white/5 rounded-full" />
+                    </div>,
+                    <div key="2" className="w-full h-full bg-[#181818] rounded-xl p-4 flex flex-col gap-3 border border-white/5 shadow-2xl">
+                      <div className="h-2 w-5/6 bg-amber-500/20 rounded-full" />
+                      <div className="h-2 w-full bg-amber-500/10 rounded-full" />
+                      <div className="h-2 w-2/3 bg-amber-500/10 rounded-full" />
+                    </div>,
+                    <div key="3" className="w-full h-full bg-[#222222] rounded-xl p-4 flex flex-col gap-3 border border-amber-500/20 shadow-2xl">
+                      <div className="h-3 w-1/2 bg-amber-500/50 rounded-full mb-2 shadow-[0_0_10px_rgba(245,158,11,0.2)]" />
+                      <div className="h-2 w-full bg-white/10 rounded-full" />
+                      <div className="h-2 w-4/5 bg-white/5 rounded-full" />
+                      <div className="mt-auto h-8 w-8 rounded-full border-2 border-amber-500/30 self-end" />
+                    </div>
+                  ]}
+                />
+              </motion.div>
+            )}
+
+            {/* Revealed Split Layout */}
+            {isFolderOpen && (
+              <motion.div 
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="w-full flex flex-col lg:flex-row gap-10 lg:gap-16"
+              >
+                {/* Left Side: Interactive Option Wheel */}
+                <div className="w-full lg:w-5/12 xl:w-2/5 h-[300px] lg:h-[700px] relative border-b lg:border-b-0 lg:border-r border-white/5 pb-10 lg:pb-0 shrink-0">
+                  <OptionWheel 
+                    items={serviceTitles} 
+                    defaultSelected={0} 
+                    onChange={(idx) => setSelectedServiceIndex(idx)} 
+                    activeColor="#fbbf24"
+                    textColor="#404040"
+                    fontSize={1.4}
+                    side="left"
+                    tilt={2}
+                    spacing={1.6}
+                    inset={10}
+                    loop={true}
+                  />
+                </div>
+
+                {/* Right Side: Single Service Detail */}
+                <div className="w-full lg:w-7/12 xl:w-3/5 flex items-center relative z-0">
+                  <motion.div
+                    key={`service-${selectedServiceIndex}`}
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className="w-full relative overflow-hidden rounded-3xl border border-white/10 bg-[#0a0a0a] p-8 md:p-12 shadow-2xl flex flex-col"
+                  >
+                <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 via-transparent to-transparent pointer-events-none z-10" />
+                
+                {/* Dynamic WebGL Light Rays */}
+                <div className="absolute inset-0 pointer-events-none z-0">
+                  <LightRays 
+                    raysColor="#fbbf24"
+                    raysOrigin="top-center"
+                    raysSpeed={0.8}
+                    pulsating={true}
+                    followMouse={true}
+                    mouseInfluence={0.2}
+                    rayLength={1.8}
+                    lightSpread={1.2}
+                    fadeDistance={1.0}
+                    saturation={1.5}
+                  />
+                </div>
+                
+                <div className="relative z-20 mb-8 text-5xl text-amber-500 drop-shadow-[0_0_15px_rgba(245,158,11,0.4)]">{selectedService.icon}</div>
+                
+                <h4 className="relative z-10 mb-4 font-display text-3xl md:text-4xl font-bold tracking-wide text-white">{selectedService.title}</h4>
+                <p className="relative z-10 mb-8 text-lg text-gray-400 leading-relaxed max-w-2xl">{selectedService.desc}</p>
+                
+                <div className="relative z-10 mb-10">
+                  <h5 className="text-[11px] font-bold uppercase tracking-widest text-amber-500 mb-4">Key Features</h5>
+                  <ul className="grid gap-4 sm:grid-cols-2">
+                    {selectedService.features.map((feature) => (
+                      <li key={feature} className="flex items-start gap-3 text-sm text-gray-200 bg-white/5 p-4 rounded-xl border border-white/5 shadow-inner">
+                        <FaCheckCircle className="text-emerald-500/80 mt-0.5 shrink-0 text-base" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <Link
+                  href={selectedService.href}
+                  className="relative z-10 mt-auto inline-flex self-start items-center gap-2 rounded-full bg-amber-500/10 px-8 py-4 text-[11px] font-bold uppercase tracking-widest text-amber-500 border border-amber-500/50 backdrop-blur-md transition-all hover:bg-amber-500 hover:text-black hover:shadow-[0_0_30px_rgba(245,158,11,0.4)]"
+                >
+                  Explore Service <span>&rarr;</span>
+                </Link>
+              </motion.div>
+            </div>
+          </motion.div>
         )}
+      </div>
+    )}
 
         {variant === "full" && (
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="mt-32"
+            className="mt-40 mb-20"
           >
-            <div className="mb-16 text-center">
-              <h3 className="text-4xl font-extrabold md:text-5xl">
-                Our Proven <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Delivery Process</span>
+            <div className="mb-20 text-center">
+              <p className="font-display text-[10px] md:text-xs font-bold uppercase tracking-[0.4em] text-amber-500/80 mb-6">How We Work</p>
+              <h3 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white">
+                Our Proven <span className="font-editorial italic font-medium bg-gradient-to-r from-amber-200 via-amber-400 to-amber-600 bg-clip-text text-transparent">Delivery Process</span>
               </h3>
-              <p className="mx-auto mt-4 max-w-2xl text-gray-400">
+              <p className="mx-auto mt-6 max-w-2xl text-gray-400 leading-relaxed font-light">
                 A streamlined, stress-free workflow designed to take you from initial idea to live launch and beyond.
               </p>
             </div>
 
-            <div className="relative mx-auto max-w-6xl">
-              {/* Connecting Line */}
-              <div className="absolute left-[50%] top-0 h-full w-[2px] -translate-x-1/2 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 md:left-0 md:top-10 md:h-[2px] md:w-[90%] md:translate-x-0 md:bg-gradient-to-r" />
-
-              <div className="grid gap-12 md:grid-cols-4 md:gap-8">
+            <div className="relative mx-auto max-w-4xl">
+              <ScrollStack 
+                useWindowScroll={true} 
+                itemDistance={40}
+                baseScale={0.9}
+                scaleDuration={0.4}
+                className="-mt-[10vh]"
+              >
                 {[
                   {
                     num: "01",
                     title: "Consultation",
                     desc: "We understand your goals, audience, and service mix.",
-                    color: "border-blue-400 shadow-[0_0_20px_rgba(96,165,250,0.3)]",
                   },
                   {
                     num: "02",
                     title: "Strategy",
                     desc: "We shape the right website, software, automation, or ad plan.",
-                    color: "border-indigo-400 shadow-[0_0_20px_rgba(129,140,248,0.3)]",
                   },
                   {
                     num: "03",
                     title: "Execution",
                     desc: "We build, automate, launch campaigns, and connect systems.",
-                    color: "border-purple-400 shadow-[0_0_20px_rgba(192,132,252,0.3)]",
                   },
                   {
                     num: "04",
                     title: "Growth",
                     desc: "We refine performance with support, reporting, and improvements.",
-                    color: "border-pink-400 shadow-[0_0_20px_rgba(244,114,182,0.3)]",
                   },
                 ].map((step, idx) => (
-                  <motion.div
+                  <ScrollStackItem
                     key={step.title}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: idx * 0.15 }}
-                    className="relative text-center md:text-left"
+                    itemClassName="bg-[#0a0a0a] border border-amber-500/10 hover:border-amber-500/30 transition-colors duration-500 flex flex-col justify-center items-center text-center group"
                   >
-                    <div
-                      className={`relative z-10 mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full border-4 bg-slate-950 text-2xl font-bold text-white md:mx-0 ${step.color}`}
-                    >
+                    {/* Giant Watermark Number */}
+                    <div className="absolute right-10 top-4 text-[200px] font-display font-bold text-white/[0.02] group-hover:text-amber-500/[0.05] transition-colors pointer-events-none select-none">
                       {step.num}
                     </div>
-                    <div className="rounded-2xl border border-white/5 bg-white/5 p-6 backdrop-blur-sm md:bg-transparent md:border-transparent md:p-0 md:backdrop-blur-none">
-                      <h4 className="mb-3 text-xl font-bold text-white">{step.title}</h4>
-                      <p className="text-sm leading-relaxed text-gray-400">{step.desc}</p>
+                    
+                    <div className="relative z-10">
+                      <div className="mx-auto mb-8 flex h-16 w-16 items-center justify-center rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-500 font-display text-xl font-bold tracking-wider shadow-[0_0_20px_rgba(245,158,11,0.15)]">
+                        {step.num}
+                      </div>
+                      <h4 className="mb-4 font-display text-4xl md:text-5xl font-bold text-white tracking-wide">{step.title}</h4>
+                      <p className="max-w-md mx-auto text-base md:text-lg leading-relaxed text-gray-400 group-hover:text-gray-300 transition-colors">{step.desc}</p>
                     </div>
-                  </motion.div>
+                  </ScrollStackItem>
                 ))}
-              </div>
+              </ScrollStack>
             </div>
           </motion.div>
         )}

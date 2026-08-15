@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Google Ads Services | Kanniyakumarione",
+  title: "Google Ads Services | SOFTGENZ",
   description: "Google Ads services for lead generation, search campaigns, keyword targeting, and conversion-focused ad support worldwide.",
 };
 

@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Digital Service Pricing Packages Worldwide | Kanniyakumarione",
+  title: "Digital Service Pricing Packages Worldwide | SOFTGENZ",
   description: "Compare affordable digital service package pricing for websites, custom software development, automation systems, SEO, and paid advertising campaigns.",
 };
 

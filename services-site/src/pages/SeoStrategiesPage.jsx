@@ -16,7 +16,7 @@ export default function SeoStrategiesPage() {
           >
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 text-sm text-blue-300 transition hover:text-white"
+              className="inline-flex items-center gap-2 text-sm text-yellow-300 transition hover:text-white"
             >
               <FaArrowLeft className="text-xs" />
               Back to Blog
@@ -41,7 +41,7 @@ export default function SeoStrategiesPage() {
             className="text-4xl font-extrabold leading-tight md:text-5xl lg:text-6xl"
           >
             Top 5 SEO Strategies for{" "}
-            <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-emerald-400 to-yellow-400 bg-clip-text text-transparent">
               Services Businesses
             </span>
           </motion.h1>
@@ -91,7 +91,7 @@ export default function SeoStrategiesPage() {
               </p>
               <Link
                 href="/contact"
-                className="mt-8 inline-flex rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 px-8 py-4 font-bold tracking-wide text-white transition hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/25"
+                className="mt-8 inline-flex rounded-full bg-gradient-to-r from-emerald-500 to-yellow-500 px-8 py-4 font-bold tracking-wide text-white transition hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/25"
               >
                 Request an SEO Audit
               </Link>

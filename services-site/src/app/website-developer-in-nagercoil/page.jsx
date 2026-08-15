@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Website Developer in Nagercoil | Kanniyakumarione",
+  title: "Website Developer in Nagercoil | SOFTGENZ",
   description: "SEO-friendly website developer in Nagercoil for local businesses that need a modern website, better Google visibility, and a stronger digital growth foundation.",
 };
 

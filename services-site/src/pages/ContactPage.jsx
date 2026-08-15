@@ -10,7 +10,7 @@ export default function ContactPage() {
         eyebrow="Contact"
         title="Start Your Project with a"
         highlight="Direct Inquiry"
-        description="Use this page to reach out for websites, software, automation, AI, ads, or creative services with one clear enquiry flow."
+        description="Reach out for websites, software, automation, AI, ads, or creative services with one clear enquiry flow."
       />
       <ContactSection hideHeader={true} />
     </SiteLayout>

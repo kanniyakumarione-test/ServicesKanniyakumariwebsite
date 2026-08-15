@@ -5,6 +5,6 @@ export default function robots() {
       allow: '/',
       disallow: ['/api/'],
     },
-    sitemap: 'https://services.kanniyakumarione.com/sitemap.xml',
+    sitemap: 'https://softgenz.kanniyakumarione.com/sitemap.xml',
   }
 }
