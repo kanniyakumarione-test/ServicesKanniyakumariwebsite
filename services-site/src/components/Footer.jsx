@@ -20,6 +20,7 @@ export default function Footer() {
     { label: "About", href: "/about" },
     { label: "Services", href: "/services" },
     { label: "Portfolio", href: "/portfolio" },
+    { label: "Blog", href: "/blog" },
     { label: "Pricing", href: "/pricing" },
     { label: "FAQ", href: "/faq" }
   ]

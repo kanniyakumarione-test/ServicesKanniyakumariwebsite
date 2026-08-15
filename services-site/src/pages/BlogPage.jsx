@@ -6,6 +6,24 @@ import SiteLayout from "../components/SiteLayout"
 const posts = [
   {
     featured: true,
+    title: "How AI Automations Can Save Your Business Thousands of Hours",
+    desc: "Discover how AI chatbots, automated invoicing, and predictive analytics can streamline operations for small businesses in Nagercoil.",
+    date: "August 10, 2026",
+    readTime: "7 min read",
+    category: "Artificial Intelligence",
+    href: "/ai-automation-customer-service",
+  },
+  {
+    featured: false,
+    title: "Why Your Local Business Needs a Mobile-First Website",
+    desc: "If your website isn't built for thumbs, you are losing customers. Learn why mobile-first design is critical in 2026.",
+    date: "August 20, 2026",
+    readTime: "5 min read",
+    category: "Web Development",
+    href: "/mobile-first-website-nagercoil",
+  },
+  {
+    featured: false,
     title: "How to Grow Your Business in Kanyakumari Online",
     desc: "Learn how local restaurants, shops, and clinics are using Google Business Profiles, websites, and Meta Ads to triple their local reach in 2026.",
     date: "April 17, 2026",

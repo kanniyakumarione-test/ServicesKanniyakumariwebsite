@@ -25,6 +25,8 @@ export default function sitemap() {
     '/website-developer-in-nagercoil',
     '/google-business-profile-setup-in-kanyakumari',
     '/blog',
+    '/mobile-first-website-nagercoil',
+    '/ai-automation-customer-service',
     '/how-to-grow-your-business-in-kanyakumari',
     '/custom-software-vs-excel',
     '/seo-strategies-services-businesses',
