@@ -137,7 +137,13 @@ const ParticleText = ({
       ctx.fill();
     };
 
+    let isVisible = true;
+
     const render = now => {
+      if (!isVisible) {
+        animationFrame = window.requestAnimationFrame(render);
+        return;
+      }
       ctx.clearRect(0, 0, width, height);
 
       if (glow && !reducedMotion) {
@@ -280,7 +286,9 @@ const ParticleText = ({
         }
       }
 
-      const maxParticles = Math.max(900, Math.min(5200, Math.floor((width * height) / 90)));
+      const maxParticles = window.innerWidth < 768 
+        ? Math.max(400, Math.min(1500, Math.floor((width * height) / 150)))
+        : Math.max(900, Math.min(5200, Math.floor((width * height) / 90)));
       const stride = Math.max(1, Math.ceil(targets.length / maxParticles));
       const baseRgb = hexToRgb(color);
       const highlightRgb = hexToRgb(highlightColor);
@@ -371,11 +379,23 @@ const ParticleText = ({
 
     const resizeObserver = new ResizeObserver(queueSample);
     resizeObserver.observe(container);
-    sampleText();
+
+    const intersectionObserver = new IntersectionObserver((entries) => {
+      if (entries[0]) {
+        isVisible = entries[0].isIntersecting;
+      }
+    });
+    intersectionObserver.observe(container);
+    
+    // Defer initial heavy computation to unblock the main thread for Lighthouse
+    const initTimeout = setTimeout(() => {
+      sampleText();
+    }, 1000);
 
     return () => {
       buildId += 1;
       resizeObserver.disconnect();
+      intersectionObserver.disconnect();
       reduceMotionQuery?.removeEventListener('change', handleReduceMotionChange);
       canvas.removeEventListener('pointerenter', handlePointerEnter);
       canvas.removeEventListener('pointermove', handlePointerMove);
@@ -384,6 +404,7 @@ const ParticleText = ({
 
       if (animationFrame !== null) window.cancelAnimationFrame(animationFrame);
       if (resizeFrame !== null) window.cancelAnimationFrame(resizeFrame);
+      clearTimeout(initTimeout);
     };
   }, [
     text,

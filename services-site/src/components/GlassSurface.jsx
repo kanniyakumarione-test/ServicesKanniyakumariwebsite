@@ -272,11 +272,12 @@ const GlassSurface = ({
       className={`${glassSurfaceClasses} ${focusVisibleClasses} ${className}`}
       style={getContainerStyles()}
     >
-      <svg
-        className="w-full h-full pointer-events-none absolute inset-0 opacity-0 -z-10"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <defs>
+      {svgSupported && (
+        <svg
+          className="w-full h-full pointer-events-none absolute inset-0 opacity-0 -z-10"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
           <filter id={filterId} colorInterpolationFilters="sRGB" x="0%" y="0%" width="100%" height="100%">
             <feImage ref={feImageRef} x="0" y="0" width="100%" height="100%" preserveAspectRatio="none" result="map" />
 
@@ -325,6 +326,7 @@ const GlassSurface = ({
           </filter>
         </defs>
       </svg>
+      )}
 
       <div className="w-full h-full flex items-center justify-center p-2 rounded-[inherit] relative z-10">
         {children}

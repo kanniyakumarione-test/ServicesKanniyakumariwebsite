@@ -50,7 +50,7 @@ export default function Footer() {
         
         {/* Centered Logo & Brand */}
         <div className="mb-10 flex flex-col items-center">
-          <img src={logo.src || logo} alt="SOFTGENZ Logo" className="h-16 w-auto mb-4 object-contain pointer-events-none drop-shadow-[0_0_20px_rgba(251,191,36,0.3)]" />
+          <img src={logo.src || logo} alt="SOFTGENZ Logo" width={140} height={140} className="h-16 w-auto mb-4 object-contain pointer-events-none drop-shadow-[0_0_20px_rgba(251,191,36,0.3)]" />
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter text-white mb-3">
             <span className="bg-gradient-to-b from-white to-white/60 bg-clip-text text-transparent">
               SOFTGENZ
