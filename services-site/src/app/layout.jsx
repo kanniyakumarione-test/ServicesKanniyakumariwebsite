@@ -37,6 +37,9 @@ export const metadata = {
       'max-snippet': -1,
     },
   },
+  alternates: {
+    canonical: 'https://softgenz.kanniyakumarione.com',
+  },
   openGraph: {
     title: "Web Design and Digital Services Worldwide | SOFTGENZ",
     description: "Explore websites, software, automation, SEO, Google Business setup, Google Ads, and Meta Ads for businesses worldwide.",
@@ -44,7 +47,7 @@ export const metadata = {
     siteName: "SOFTGENZ",
     images: [
       {
-        url: "/og-image.svg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "SOFTGENZ web design and digital services for global businesses",
@@ -57,10 +60,16 @@ export const metadata = {
     card: "summary_large_image",
     title: "Web Design and Digital Services Worldwide | SOFTGENZ",
     description: "Websites, software, automation, SEO, Google Business support, Google Ads, and Meta Ads for businesses globally.",
-    images: ["/og-image.svg"],
+    images: ["/og-image.png"],
   },
   icons: {
-    icon: '/softgenz.ico',
+    icon: [
+      { url: '/softgenz.ico' },
+      { url: '/icon.png', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
   },
 };
 
@@ -72,7 +81,7 @@ const jsonLd = {
       "@id": "https://softgenz.kanniyakumarione.com/#business",
       "name": "SOFTGENZ",
       "url": "https://softgenz.kanniyakumarione.com/",
-      "image": "https://softgenz.kanniyakumarione.com/og-image.svg",
+      "image": "https://softgenz.kanniyakumarione.com/og-image.png",
       "logo": "https://softgenz.kanniyakumarione.com/favicon.ico",
       "description": "Website development, custom software, automation, SEO, Google Business Profile optimization, Google Ads, and Meta Ads for businesses worldwide.",
       "email": "mailto:softgenz@gmail.com",
@@ -102,7 +111,7 @@ export default function RootLayout({ children }) {
       <head>
         <meta name="google-site-verification" content="ZjbjkFkgwBISuhMoaGCaApgCYvw_pJanlm0lmKUJNIg" />
         <link rel="icon" href="/softgenz.ico" />
-        <link rel="manifest" href="/site.webmanifest" />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

@@ -234,6 +234,9 @@ export default function Strands({
   const ctnDom = useRef(null);
 
   useEffect(() => {
+    // Disable WebGL Strands on mobile to prevent GPU context crashes (sad face icons)
+    if (typeof window !== 'undefined' && window.innerWidth < 768) return;
+
     const ctn = ctnDom.current;
     if (!ctn) return;
 
