@@ -90,35 +90,13 @@ export default function Navbar() {
             backgroundOpacity={0.1}
             className={`transition-all duration-500 ${scrolled ? 'shadow-[0_0_20px_rgba(245,158,11,0.15)]' : ''}`}
           >
-            <div className="flex justify-between sm:grid sm:grid-cols-[1fr_auto_1fr] items-center w-full px-2 sm:px-6 py-2 gap-2 sm:gap-4">
+            <div className="flex justify-between items-center w-full px-2 sm:px-6 py-2 gap-2 sm:gap-4">
               {/* Left: Text */}
               <div className="flex justify-start">
                 <Link href="/" className="z-[60]" aria-label="SOFTGENZ home" onClick={() => setOpen(false)}>
                   <GlitchText enableOnHover={true} speed={0.4} className="font-brand text-[16px] sm:text-[22px] md:text-[26px] font-bold tracking-[0.1em] sm:tracking-[0.25em] text-white uppercase whitespace-nowrap mt-0.5 sm:mt-1">
                     SOFTGENZ
                   </GlitchText>
-                </Link>
-              </div>
-
-              {/* Center: Logo */}
-              <div className="flex justify-center shrink-0 mx-2">
-                <Link href="/" className="z-[60] relative group" aria-label="SOFTGENZ home" onClick={() => setOpen(false)}>
-                  <motion.div
-                    whileHover={{ scale: 1.15, rotate: [0, -5, 5, -5, 0] }}
-                    transition={{ duration: 0.4 }}
-                    className="relative flex items-center justify-center w-10 h-10 sm:w-14 sm:h-14 bg-[#050505] rounded-full border border-white/10 shadow-[0_0_15px_rgba(251,191,36,0.1)] z-10 overflow-hidden"
-                  >
-                    <Image src={logo} alt="SOFTGENZ logo" className="h-5 sm:h-9 w-auto object-contain transition-transform duration-300 group-hover:drop-shadow-[0_0_8px_rgba(251,191,36,0.8)] group-hover:scale-110" width={150} height={50} />
-                  </motion.div>
-                  
-                  {/* Magic glowing pulse behind it that activates on hover */}
-                  <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                    <motion.div
-                      className="absolute inset-0 rounded-full bg-amber-500/40 blur-xl"
-                      animate={{ scale: [1, 1.5, 1] }}
-                      transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-                    />
-                  </div>
                 </Link>
               </div>
 
