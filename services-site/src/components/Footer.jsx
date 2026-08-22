@@ -62,11 +62,11 @@ export default function Footer() {
         {/* Contact Actions */}
         <div className="flex flex-wrap items-center justify-center gap-6 mb-12">
           <Link 
-            href="mailto:softgenz@gmail.com" 
+            href="mailto:softgenzservices@gmail.com" 
             className="group relative flex items-center justify-center gap-3 overflow-hidden rounded-full border border-white/10 bg-white/5 px-8 py-4 backdrop-blur-md transition-all duration-300 hover:border-white/20 hover:bg-white/10 hover:shadow-[0_0_30px_rgba(255,255,255,0.05)]"
           >
             <FaEnvelope className="text-amber-500 text-lg transition-transform duration-300 group-hover:scale-110" />
-            <span className="font-sans font-medium tracking-wide text-white">softgenz@gmail.com</span>
+            <span className="font-sans font-medium tracking-wide text-white">softgenzservices@gmail.com</span>
             <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
           </Link>
 

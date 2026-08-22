@@ -31,7 +31,7 @@ const sections = [
   },
   {
     title: "7. Your Rights",
-    body: `You have the right to request deletion or correction of any personal data you have shared with us. To do so, contact us directly at softgenz@gmail.com or via WhatsApp at +91 73588 47752 and we will respond promptly.`,
+    body: `You have the right to request deletion or correction of any personal data you have shared with us. To do so, contact us directly at softgenzservices@gmail.com or via WhatsApp at +91 73588 47752 and we will respond promptly.`,
   },
   {
     title: "8. Changes to This Policy",
@@ -39,7 +39,7 @@ const sections = [
   },
   {
     title: "9. Contact",
-    body: `For any privacy-related questions, contact us at:\n\nEmail: softgenz@gmail.com\nPhone: +91 73588 47752\nLocation: Nagercoil, Tamil Nadu, India`,
+    body: `For any privacy-related questions, contact us at:\n\nEmail: softgenzservices@gmail.com\nPhone: +91 73588 47752\nLocation: Nagercoil, Tamil Nadu, India`,
   },
 ]
 

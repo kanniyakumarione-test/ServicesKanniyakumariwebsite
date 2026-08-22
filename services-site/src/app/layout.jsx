@@ -84,7 +84,7 @@ const jsonLd = {
       "image": "https://softgenz.kanniyakumarione.com/og-image.png",
       "logo": "https://softgenz.kanniyakumarione.com/favicon.ico",
       "description": "Website development, custom software, automation, SEO, Google Business Profile optimization, Google Ads, and Meta Ads for businesses worldwide.",
-      "email": "mailto:softgenz@gmail.com",
+      "email": "mailto:softgenzservices@gmail.com",
       "telephone": "+91 73588 47752",
       "areaServed": ["Worldwide", "India", "United Kingdom", "United States", "Australia", "Canada", "Singapore"],
       "address": {
@@ -97,7 +97,7 @@ const jsonLd = {
         "@type": "ContactPoint",
         "contactType": "customer support",
         "telephone": "+91 73588 47752",
-        "email": "softgenz@gmail.com",
+        "email": "softgenzservices@gmail.com",
         "areaServed": "Worldwide",
         "availableLanguage": ["English", "Tamil"]
       }

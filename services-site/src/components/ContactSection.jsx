@@ -158,7 +158,7 @@ export default function ContactSection({ hideHeader = false }) {
                     Book Free Call
                   </SpecularButton>
                 </Link>
-                <Link href="mailto:softgenz@gmail.com">
+                <Link href="mailto:softgenzservices@gmail.com">
                   <SpecularButton 
                     baseColor="#262626" 
                     lineColor="#fbbf24" 
