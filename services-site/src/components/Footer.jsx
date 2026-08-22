@@ -52,11 +52,14 @@ export default function Footer() {
         {/* Centered Logo & Brand */}
         <div className="mb-10 flex flex-col items-center">
           <Image src={logo} alt="SOFTGENZ Logo" width={140} height={140} className="h-16 w-auto mb-4 object-contain pointer-events-none drop-shadow-[0_0_20px_rgba(251,191,36,0.3)]" />
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter text-white mb-3">
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter text-white mb-1">
             <span className="bg-gradient-to-b from-white to-white/60 bg-clip-text text-transparent">
               SOFTGENZ
             </span>
           </h2>
+          <p className="text-amber-500 font-semibold tracking-widest uppercase text-xs md:text-sm mt-2 mb-2 text-center">
+            Software for the Digital Generation
+          </p>
         </div>
 
         {/* Contact Actions */}

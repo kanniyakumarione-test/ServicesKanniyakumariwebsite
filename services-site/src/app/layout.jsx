@@ -17,11 +17,11 @@ export const metadata = {
     default: "Web Design and Digital Services Worldwide | SOFTGENZ",
     template: "%s | SOFTGENZ"
   },
-  description: "SOFTGENZ helps businesses worldwide with websites, custom software, automation, SEO, Google Business optimization, Google Ads, and Meta Ads.",
+  description: "Software for the Digital Generation. SOFTGENZ helps businesses worldwide with websites, custom software, automation, SEO, Google Business optimization, Google Ads, and Meta Ads.",
   applicationName: "SOFTGENZ",
   authors: [{ name: "SOFTGENZ" }],
   generator: 'Next.js',
-  keywords: ['Web Design', 'Digital Services', 'SEO', 'Automation', 'Google Ads', 'Meta Ads', 'Custom Software'],
+  keywords: ['Web Design Company Nagercoil', 'Software Developer Kanyakumari', 'Digital Marketing Agency', 'SEO Expert Tamil Nadu', 'Best Web Design India', 'Custom Software Development', 'Google Ads Agency', 'Meta Ads Expert', 'Business Automation Services'],
   referrer: 'origin-when-cross-origin',
   creator: 'SOFTGENZ',
   publisher: 'SOFTGENZ',
@@ -42,7 +42,7 @@ export const metadata = {
   },
   openGraph: {
     title: "Web Design and Digital Services Worldwide | SOFTGENZ",
-    description: "Explore websites, software, automation, SEO, Google Business setup, Google Ads, and Meta Ads for businesses worldwide.",
+    description: "Software for the Digital Generation. Explore websites, software, automation, SEO, Google Business setup, Google Ads, and Meta Ads for businesses worldwide.",
     url: "https://softgenz.kanniyakumarione.com/",
     siteName: "SOFTGENZ",
     images: [

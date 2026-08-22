@@ -83,7 +83,7 @@ export default function Hero() {
           variants={itemVariants}
           className="mt-6 max-w-2xl text-lg font-light leading-relaxed text-gray-400 md:text-xl"
         >
-          SOFTGENZ empowers businesses worldwide with high-performance websites, 
+          <span className="text-amber-500 font-medium tracking-wide">Software for the Digital Generation.</span> SOFTGENZ empowers businesses worldwide with high-performance websites, 
           custom software, and precision marketing strategies that dominate attention.
         </motion.p>
 
